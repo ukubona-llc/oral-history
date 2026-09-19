@@ -1,0 +1,4447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oral history: verbatim archive</title>
+<!--
+APPEND-ONLY. To add a session, copy the whole <article class="session"> block below,
+change its id and heading, paste the new Zoom .txt into the V block and the new
+chat log (.md) into the I' block. Never edit or delete text inside an existing block.
+Corrections go in a new session's I' layer. Update the SHA-256 in the new block only.
+-->
+<style>
+:root {
+  --bg: #f0f3f2; --panel: #ffffff; --ink: #16222a; --muted: #55666e;
+  --rule: #c8d2d5; --accent: #0e5a61; --ok: #1d6b3a; --bad: #a3271f;
+  --serif: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f171b; --panel: #152127; --ink: #e2e9ea; --muted: #93a5ab;
+    --rule: #2b3c43; --accent: #74c4ca; --ok: #7fd39b; --bad: #ff9a90;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f171b; --panel: #152127; --ink: #e2e9ea; --muted: #93a5ab;
+  --rule: #2b3c43; --accent: #74c4ca; --ok: #7fd39b; --bad: #ff9a90;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--serif);
+  font-size: 1.0625rem; line-height: 1.6; }
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+header.top { max-width: 62rem; margin: 0 auto; padding: 2.5rem 1.25rem 1rem; }
+h1 { font-size: clamp(1.9rem, 4.5vw, 2.8rem); line-height: 1.12; margin: 0 0 .6rem;
+  font-weight: 700; letter-spacing: -0.01em; }
+.lede { max-width: 44rem; color: var(--muted); margin: 0; }
+nav.jump { max-width: 62rem; margin: 0 auto; padding: .75rem 1.25rem; position: sticky; top: 0;
+  background: var(--bg); border-bottom: 1px solid var(--rule); z-index: 2;
+  display: flex; gap: 1.25rem; flex-wrap: wrap; align-items: center; font-size: .95rem; }
+nav.jump button { margin-left: auto; font: inherit; color: var(--ink); background: var(--panel);
+  border: 1px solid var(--rule); border-radius: 4px; padding: .25rem .7rem; cursor: pointer; }
+main { max-width: 62rem; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
+.session > h2 { font-size: 1.5rem; margin: 1rem 0 .25rem; }
+.session > .when { color: var(--muted); margin: 0 0 1.25rem; }
+.layer { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; margin: 0 0 1rem; }
+.layer > details > summary { cursor: pointer; padding: .9rem 1.1rem; display: flex; gap: 1rem;
+  align-items: baseline; flex-wrap: wrap; list-style-position: inside; }
+.ttl { font-weight: 700; font-size: 1.15rem; }
+.fn { font-family: var(--mono); font-size: .8rem; color: var(--muted); overflow-wrap: anywhere; }
+.note { margin: 0; padding: 0 1.1rem .5rem; color: var(--muted); max-width: 46rem; }
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: .15rem 1rem; margin: 0;
+  padding: .4rem 1.1rem 1rem; font-size: .9rem; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; }
+.hash { font-family: var(--mono); font-size: .75rem; overflow-wrap: anywhere; }
+.verify.ok { color: var(--ok); }
+.verify.bad { color: var(--bad); }
+pre { margin: 0; padding: 1.1rem; border-top: 1px solid var(--rule); white-space: pre-wrap;
+  overflow-wrap: anywhere; max-height: 70vh; overflow: auto; font-size: .92rem; line-height: 1.55; }
+pre.v { font-family: var(--mono); font-size: .84rem; }
+pre.i { font-family: var(--serif); }
+footer { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(--muted); font-size: .9rem; }
+@media (max-width: 40rem) { .facts { grid-template-columns: 1fr; } .facts dd { margin-bottom: .4rem; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Oral history: verbatim archive</h1>
+  <p class="lede">Each session keeps two layers. V is the Zoom transcript exactly as exported. I&#8242; is the chat between us that turned it into a summary, a family tree, a question list and a dramatis personae. Nothing below is edited; every block carries a checksum you can re-run.</p>
+</header>
+<nav class="jump" aria-label="Sessions and layers">
+  <a href="#s1">Session 1</a>
+  <a href="#s1-v">V: transcript</a>
+  <a href="#s1-i">I&#8242;: chat log</a>
+  <button type="button" id="verify-all">Verify checksums</button>
+</nav>
+<main>
+<article class="session" id="s1">
+  <h2>Session 1</h2>
+  <p class="when">Recorded 2026-09-19, trial session, about two hours. Chat log runs through Dramatis Personae v0; later turns not yet appended.</p>
+
+<section class="layer" id="s1-v">
+  <details>
+    <summary><span class="ttl">V: verbatim transcript</span><span class="fn">Ukubona_LLC_s_Personal_Meeting_Room_transcript_2026-09-19_06_17_26.txt</span></summary>
+    <p class="note">Zoom AI transcript, pasted whole. Speaker labels are Zoom&#8217;s: &#8220;Ukubona LLC&#8221; is the shared account and covers more than one voice; &#8220;S&#8221; is Charles.</p>
+    <dl class="facts">
+      <dt>Bytes</dt><dd>92,689</dd>
+      <dt>Characters</dt><dd>92,265</dd>
+      <dt>Lines</dt><dd>4,149</dd>
+      <dt>SHA-256</dt><dd class="hash" data-expect="e607cd4803dc3fb6b38fe779581e35d5e0f8335d530ee961b18a677e5c79f897">e607cd4803dc3fb6b38fe779581e35d5e0f8335d530ee961b18a677e5c79f897</dd>
+      <dt>Check</dt><dd class="verify" data-target="s1-v-text">not run</dd>
+    </dl>
+    <pre id="s1-v-text" class="v">[Ukubona LLC] 04:30:49
+Okay. Okay, now allow me to do some technical stuff. I just want to confirm that we&#x27;re getting a transcript.
+
+[Johnny] 04:30:49
+See ya.
+
+[Ukubona LLC] 04:30:51
+Uh… just confirm.
+
+[S] 04:30:51
+Yeah, yeah. That&#x27;s the most important thing, yeah? Exactly.
+
+[Johnny] 04:30:51
+That&#x27;s important!
+
+[S] 04:31:03
+Oh.
+
+[Ukubona LLC] 04:31:05
+Okay, so like it&#x27;s transcribing.
+
+[Johnny] 04:31:10
+Okay.
+
+[Ukubona LLC] 04:31:13
+You too, it&#x27;s not lying. Over and on. Wow, no, that&#x27;s a good question. That&#x27;s what I can&#x27;t answer. So yes, on my side.
+
+[Johnny] 04:31:23
+Don&#x27;t tell…
+
+[Ukubona LLC] 04:31:24
+I can confirm that it&#x27;s transcribing. I can see it literally, real time.
+
+[S] 04:31:29
+Okay, wonderful, wonderful, wonderful.
+
+[Johnny] 04:31:30
+Okay.
+
+[Ukubona LLC] 04:31:31
+So the transcript will be available at the end and I&#x27;ll share it.
+
+[Johnny] 04:31:37
+Okay.
+
+[Ukubona LLC] 04:31:37
+And then we see how useful it is, and then we plan forward.
+
+[S] 04:31:44
+Yeah, I think I I think for that. Thank you, Cadiz. So for general planning, it will not. What&#x27;s the time available for us this meeting?
+
+[Ukubona LLC] 04:31:54
+On our side, we&#x27;ve had good breakfast, so don&#x27;t worry. Until you get tired.
+
+[S] 04:31:57
+Uh-huh.
+
+[Johnny] 04:32:01
+Italy&#x27;s glucose levels… I… there&#x27;s no UHD in Monrovia!
+
+[S] 04:32:11
+Okay.
+
+[Ukubona LLC] 04:32:11
+I&#x27;ll try heat treat. Okay.
+
+[S] 04:32:14
+OK, but I know that the the team you see here will will later make sense of whatever you say in any logical manner that ourselves and the and the system provides. But we just want you.
+
+[Ukubona LLC] 04:32:16
+Mm-hmm.
+
+[S] 04:32:29
+Or you&#x27;ll get a free day.
+
+[S] 04:32:31
+Uh, that&#x27;s why we didn&#x27;t want you to prepare for anything. We just, uh, wanted you to, to, to talk freely. I go, of course, the only logical sequencing yet we did, I mean, very basic.
+
+[S] 04:32:46
+While you were early, early life, early childhood.
+
+[S] 04:32:50
+Period.
+
+[S] 04:32:52
+Uh, which could go anywhere between 0 to 18, or even early, uh, years, you know, 20, but, uh, early years.
+
+[S] 04:33:02
+got TDD infused with anything like, well, of course, no quit applying with studies and things, but earlier, then you have schooling, and you have early employment, and then later.
+
+[S] 04:33:18
+Later years, but we don&#x27;t want you to start from any one of those. You could start anywhere.
+
+[S] 04:33:23
+If we&#x27;ll do our work with the…
+
+[S] 04:33:26
+providing this information. But we would like you to as much as possible. Feel free.
+
+[S] 04:33:33
+uh, to start anywhere, what you want to share, what you want to share with the world, essentially. Um, for you as an iconic person, a Musoga, a Sydney Musoga.
+
+[S] 04:33:43
+Of course, a parent. I think, of course, a person who has also been having public service.
+
+[S] 04:33:51
+background and all that. But, uh, you just feel free to start. Anyway, we&#x27;ll create the magic of where we place all your stuff.
+
+[S] 04:34:00
+But you can just feel free.
+
+[S] 04:34:02
+Okay, of course, having in mind for us, for us, of course, to know capturing the life cycle, there are areas, there is schooling, there is, there is early employment where you spent a lot of your time.
+
+[S] 04:34:19
+Especially Malay Rand, the university, and then later employment mixed with other.
+
+[S] 04:34:26
+Things like consultancies and public service and also so travel and other national support.
+
+[S] 04:34:34
+But feel free, just start.
+
+[S] 04:34:36
+What you want to share?
+
+[S] 04:34:38
+With the world, what we need to capture.
+
+[S] 04:34:42
+Uh, about you.
+
+[S] 04:34:43
+I think Cadia and Jenny can compliment on on that.
+
+[Johnny] 04:34:49
+That&#x27;s okay. For me, the only house rule that I would request, even if it will not be ideal, is that, to the extent possible, let&#x27;s have this conversation in English, eh?
+
+[Johnny] 04:35:02
+Uh… I know that this software is called Ukubona, so it can&#x27;t translate to Urukono. But, uh…
+
+[S] 04:35:09
+I need to translate to Ukona. Really?
+
+[S] 04:35:12
+Tetra
+
+[Johnny] 04:35:13
+I, I don&#x27;t know.
+
+[Ukubona LLC] 04:35:13
+I I&#x27;m not so sure about that.
+
+[Johnny] 04:35:17
+But, but, but Charles, I think you&#x27;ve captured it well. There&#x27;s just something about.
+
+[Johnny] 04:35:25
+Starting the conversation rolling with getting a sense of.
+
+[Johnny] 04:35:31
+Who daddy is, what his first memories are of, of life.
+
+[Johnny] 04:35:38
+And that… it&#x27;s pretty unstructured, but this is an easy way to get an easy way of easing into the conversation, and then we&#x27;ll see how it, uh…
+
+[Johnny] 04:35:49
+goes on from there. So, um, perhaps, yeah, Daddy, we could hear what you think about that, and then get this ball rolling.
+
+[Ukubona LLC] 04:36:02
+Yeah, first of all, I want to thank you for this thought, the idea that we should do.
+
+[Ukubona LLC] 04:36:11
+Use this available technology.
+
+[Ukubona LLC] 04:36:15
+Learn more about me at a low cost.
+
+[Ukubona LLC] 04:36:20
+compared to the one we used at first. Somebody was exploiting my ignorance.
+
+[Ukubona LLC] 04:36:30
+And good that we can now reach our way. And I&#x27;m happy.
+
+[Ukubona LLC] 04:36:38
+Sir, you were at, um…
+
+[Ukubona LLC] 04:36:40
+I would rather we begin with my early life.
+
+[Ukubona LLC] 04:36:44
+And build on to that one. Oh, questions can spring.
+
+[Ukubona LLC] 04:36:51
+from that phrase, that phrase of life of mine.
+
+[Ukubona LLC] 04:36:55
+But, um…
+
+[Ukubona LLC] 04:36:57
+Very briefly.
+
+[Ukubona LLC] 04:36:59
+I would like you to know that, um…
+
+[Ukubona LLC] 04:37:02
+I have been a man of many worlds.
+
+[Ukubona LLC] 04:37:08
+Cultures in quote unquote.
+
+[Ukubona LLC] 04:37:14
+You know that your great-grandmother is… was a who?
+
+[Ukubona LLC] 04:37:22
+Was it kisser
+
+[Ukubona LLC] 04:37:26
+Grandmother Mukono.
+
+[Johnny] 04:37:28
+Yes.
+
+[Ukubona LLC] 04:37:30
+Ukono in, uh…
+
+[Ukubona LLC] 04:37:34
+Sushi counter
+
+[Ukubona LLC] 04:37:39
+The second is, of course, in Soga.
+
+[Ukubona LLC] 04:37:45
+And therefore, I had some challenges.
+
+[Ukubona LLC] 04:37:50
+When it came to learning the language, the local language of ours, I am a Ukono.
+
+[Ukubona LLC] 04:37:58
+I can speak Olukonu, Olamoji, I can also…
+
+[Ukubona LLC] 04:38:05
+speaker…
+
+[Ukubona LLC] 04:38:07
+Also ID
+
+[Ukubona LLC] 04:38:09
+Because my other work was in Kenya.
+
+[Ukubona LLC] 04:38:15
+So you can ask me any question you want in the chat.
+
+[Ukubona LLC] 04:38:20
+in Swahili.
+
+[Ukubona LLC] 04:38:23
+So I have those magical beginnings.
+
+[Ukubona LLC] 04:38:28
+And I really enjoyed them. I thank God that I am able to speak freely.
+
+[Ukubona LLC] 04:38:36
+with an East African language.
+
+[Ukubona LLC] 04:38:40
+But
+
+[Ukubona LLC] 04:38:42
+One thing I remember.
+
+[Ukubona LLC] 04:38:45
+Which makes this event very important.
+
+[Ukubona LLC] 04:38:49
+I… there&#x27;s something I wanted to know.
+
+[Ukubona LLC] 04:38:53
+And I was postponing
+
+[Ukubona LLC] 04:38:57
+Upstairs to know it.
+
+[Ukubona LLC] 04:39:00
+And that is the history of Vice Gaga.
+
+[Ukubona LLC] 04:39:06
+It&#x27;s appreciated. Say the, uh, the Sandoval.
+
+[Ukubona LLC] 04:39:15
+Um, I was putting it off.
+
+[Ukubona LLC] 04:39:18
+Until that day when he died.
+
+[Ukubona LLC] 04:39:23
+Uh, he has died. Before I ask this question.
+
+[Ukubona LLC] 04:39:28
+I have that before I find this one out.
+
+[Ukubona LLC] 04:39:32
+In other words, there are many times I regretted shortly after his death.
+
+[Ukubona LLC] 04:39:39
+What was I doing? Why didn&#x27;t I ask for it? And I can&#x27;t wake him up anymore. So that is why I please.
+
+[Ukubona LLC] 04:39:47
+this idea of yours to do what we are doing now, now you have the opportunity to remember what to ask.
+
+[Ukubona LLC] 04:39:57
+And why you are asking it?
+
+[Ukubona LLC] 04:39:59
+So use this time to think about things that you might regret.
+
+[Ukubona LLC] 04:40:06
+for Fredia to ask.
+
+[Ukubona LLC] 04:40:08
+Wait, let me see what I…
+
+[Ukubona LLC] 04:40:10
+Just think of the things you are likely to say. I wish.
+
+[Ukubona LLC] 04:40:15
+We wish we had asked Dad about this.
+
+[Ukubona LLC] 04:40:20
+So that is why this occasion is very important.
+
+[Ukubona LLC] 04:40:27
+Because we want to avoid
+
+[Ukubona LLC] 04:40:29
+Moments when we should be. We should do.
+
+[Ukubona LLC] 04:40:36
+We should do
+
+[Ukubona LLC] 04:40:38
+be just rejoicing now, perhaps. I&#x27;m happy I asked Dad this. Now, at least I know he&#x27;s gone, but at least I can remember he used to tell us this. He used to tell us this.
+
+[Johnny] 04:40:50
+Yeah.
+
+[Ukubona LLC] 04:40:52
+This was his favorite
+
+[Ukubona LLC] 04:40:55
+story and so on. So in short, I want to pronounce my.
+
+[Ukubona LLC] 04:41:02
+my blessing on this particular topic.
+
+[Ukubona LLC] 04:41:06
+Next slide, please.
+
+[Ukubona LLC] 04:41:07
+Because
+
+[Ukubona LLC] 04:41:09
+It is something which should have been
+
+[Ukubona LLC] 04:41:13
+Again and again after I have gone.
+
+[Ukubona LLC] 04:41:16
+Now it is your turn.
+
+[Ukubona LLC] 04:41:20
+Okay, uh…
+
+[S] 04:41:23
+So imperative to anticoagulate as much as possible, we&#x27;ll ask the questions.
+
+[S] 04:41:28
+The gaps, but we want you to tell us now.
+
+[S] 04:41:32
+Exactly, if you have your other life, or…
+
+[S] 04:41:37
+Well, at any part of your… because life is a cycle, it&#x27;s a cycle, it&#x27;s a continuum from early childhood to your schooling experience, your early employment, which is always different, very different given the length of your life.
+
+[S] 04:41:52
+Which is very different from the later employment. I had those two. Those two are separate, absolutely.
+
+[S] 04:41:59
+So we want to pick up on what you&#x27;ve just said now. For example, what did you, what didn&#x27;t you ask?
+
+[S] 04:42:12
+And how can we build on that particular aspect you&#x27;ve just talked about?
+
+[S] 04:42:18
+I don&#x27;t know how to do it.
+
+[S] 04:42:22
+Uh, we&#x27;re going to just briefly about that. I&#x27;m sad and I say Gaga. I was amused by Johnny&#x27;s deep research and indicated to the link to the Vivito, for example. So the word Nyabongo.
+
+[S] 04:42:38
+Comes from the number number comes.
+
+[Ukubona LLC] 04:42:38
+Oh, so the king, the king, I think, is taking on the Nabongo, is going to be Nabongo the first.
+
+[S] 04:42:45
+Yes, yes, yes, yes. Is it Nyakairo or something? So there is something about where you started quite nicely. We want where we come from. I think you have a longer story.
+
+[S] 04:43:03
+Because I remember we have a long heritage.
+
+[S] 04:43:15
+I mean, we come from, we have a family tree, for example, yet over.
+
+[Johnny] 04:43:20
+It&#x27;s a heritage.
+
+[Ukubona LLC] 04:43:21
+So, it&#x27;s the jobs.
+
+[Ukubona LLC] 04:43:24
+So Charles, you&#x27;ve mentioned what I was itching to say. I think a family tree is a nice place to begin because in a play, if you get a Shakespeare play, the very first thing are the characters.
+
+[S] 04:43:35
+Mm-hmm, mm-hmm, good, good, good.
+
+[Ukubona LLC] 04:43:38
+The dramatic dramatis personae. So you list the characters, then enter the first character, because that is going to mention names.
+
+[Ukubona LLC] 04:43:48
+But if the account has been listed in the family tree as best as you can get it, my understanding, Daddy, is that even you have gaps in the family tree. Of course. And so in future sessions, because this is just our first trial, in future sessions, you can say, consult me.
+
+[S] 04:43:49
+Of people, yes.
+
+[Ukubona LLC] 04:44:09
+Uncle — is Uncle Nabon, yeah? I&#x27;ll ask him.
+
+[Ukubona LLC] 04:44:14
+Dad, I&#x27;m asking for clarification.
+
+[Johnny] 04:44:15
+It is different.
+
+[Ukubona LLC] 04:44:17
+Yes. Dad, sorry, not uncle. Yes, your uncle. So I think, Daddy, can you try to construct a family tree as best as you can?
+
+[Ukubona LLC] 04:44:29
+starting with you. Then you go upwards towards.
+
+[Ukubona LLC] 04:44:34
+Ikesa&#x27;s side and Abhimerici&#x27;s side. Yeah, please remind you, the starting point for me is to let you know that our clan.
+
+[Ukubona LLC] 04:44:47
+Truly what they call Baise Gaga.
+
+[Ukubona LLC] 04:44:50
+I say that God are delivering me.
+
+[Ukubona LLC] 04:44:56
+crown of…
+
+[Ukubona LLC] 04:45:01
+The ruling clan of the city Kingdom, if you may call it Kingdom.
+
+[Ukubona LLC] 04:45:07
+Because…
+
+[Ukubona LLC] 04:45:09
+Oui Sa Za, what they called Oui Sa Za.
+
+[Ukubona LLC] 04:45:13
+This is something we imported from Baganda.
+
+[Ukubona LLC] 04:45:18
+The concept of is such a.
+
+[Ukubona LLC] 04:45:21
+It was imported from Uganda when they came to Rouva.
+
+[Ukubona LLC] 04:45:27
+to rule over us via Kakunguru. Kakunguru was a Muganda who was posted by colonialists.
+
+[Ukubona LLC] 04:45:34
+to administer in Osaka.
+
+[Ukubona LLC] 04:45:37
+Sure.
+
+[Ukubona LLC] 04:45:39
+We, um…
+
+[Ukubona LLC] 04:45:42
+We belong to the ruling clan.
+
+[Ukubona LLC] 04:45:49
+And we are wasting our time.
+
+[Ukubona LLC] 04:45:51
+And, uh…
+
+[Ukubona LLC] 04:45:59
+The Wizards of City.
+
+[Ukubona LLC] 04:46:02
+As I said, told you.
+
+[Ukubona LLC] 04:46:04
+Racism was actually the king.
+
+[Ukubona LLC] 04:46:08
+King goes on CTA.
+
+[Ukubona LLC] 04:46:11
+Well, it&#x27;s called the city.
+
+[Ukubona LLC] 04:46:14
+Which is
+
+[Ukubona LLC] 04:46:17
+Oh, what? Oh, the receipt.
+
+[Ukubona LLC] 04:46:21
+And, uh…
+
+[Ukubona LLC] 04:46:23
+One way of recognizing that we are the ruling class are the names.
+
+[Ukubona LLC] 04:46:30
+Jisiji is the order, is the main title used.
+
+[Ukubona LLC] 04:46:37
+But…
+
+[Ukubona LLC] 04:46:39
+When to come to, when to come to.
+
+[Ukubona LLC] 04:46:42
+Knowing what they call .
+
+[Ukubona LLC] 04:46:50
+And that is…
+
+[Ukubona LLC] 04:46:55
+is, um…
+
+[Ukubona LLC] 04:46:57
+Not a clan, the clan is the overall thing, but…
+
+[Ukubona LLC] 04:47:02
+But the king had many sons, many children.
+
+[Ukubona LLC] 04:47:08
+After whom?
+
+[Ukubona LLC] 04:47:10
+Subscript.
+
+[Ukubona LLC] 04:47:13
+Children were named.
+
+[Ukubona LLC] 04:47:16
+Now, I think the oldest name…
+
+[Ukubona LLC] 04:47:21
+Uh, over by city.gov.
+
+[Ukubona LLC] 04:47:30
+Since you&#x27;re the main person.
+
+[Ukubona LLC] 04:47:35
+And, uh…
+
+[Ukubona LLC] 04:47:37
+Then he hugged it.
+
+[Ukubona LLC] 04:47:39
+They had to.
+
+[Ukubona LLC] 04:47:42
+Hmmm.
+
+[Ukubona LLC] 04:47:43
+I wish I had prepared for this, I think.
+
+[Ukubona LLC] 04:47:46
+Allowing me to do some homework, but first before.
+
+[S] 04:47:51
+Yeah. Any reflection? You don&#x27;t have to. It&#x27;s totally free to just overlook it at any time. Just go with what you remember.
+
+[Ukubona LLC] 04:47:59
+Yes, you can, you can repeat it.
+
+[Ukubona LLC] 04:48:03
+Yeah. Okay.
+
+[S] 04:48:03
+You don&#x27;t need to be so structured. Just say it.
+
+[Johnny] 04:48:05
+And…
+
+[Johnny] 04:48:07
+And Charles, I just want to provide a little clarification here. Yes, much as we are talking of the first music.
+
+[Johnny] 04:48:15
+Chisichi, what could help with daddy is some of these facts which are a little closer, like saying, I am the son of Abhimerechi. Abhimerechi was the son of so-and-so, and we move without looking at.
+
+[Johnny] 04:48:29
+By saying again the abstract, at least those are things he has closer recollection. So once we move up to marriage.
+
+[Ukubona LLC] 04:48:37
+car, um, sun…
+
+[Ukubona LLC] 04:48:39
+Ovo, I admit it, you doubt him well.
+
+[Ukubona LLC] 04:48:42
+Acknowledge that, Emma.
+
+[Ukubona LLC] 04:48:48
+was the son of Malachi.
+
+[Ukubona LLC] 04:48:53
+Malachi…
+
+[Ukubona LLC] 04:48:56
+As you can see, these are Christian names, but that.
+
+[Ukubona LLC] 04:49:01
+There&#x27;s a lot of…
+
+[Ukubona LLC] 04:49:03
+Oh, grandparents.
+
+[Ukubona LLC] 04:49:05
+We have a vehicle based.
+
+[Ukubona LLC] 04:49:08
+They have the medical names.
+
+[Ukubona LLC] 04:49:11
+So my, I&#x27;ve been married to that in my oldest son.
+
+[Ukubona LLC] 04:49:21
+of the Sarnovo.
+
+[Ukubona LLC] 04:49:22
+Did I mention Malachi?
+
+[S] 04:49:25
+Yes, yes.
+
+[Ukubona LLC] 04:49:27
+Yeah.
+
+[Ukubona LLC] 04:49:30
+I&#x27;ll just follow.
+
+[Ukubona LLC] 04:49:36
+And, uh…
+
+[Ukubona LLC] 04:49:39
+He says he was born in 19…
+
+[Ukubona LLC] 04:49:45
+11.
+
+[Ukubona LLC] 04:49:49
+And but we were using the name.
+
+[Ukubona LLC] 04:49:53
+It&#x27;s that Malachi was given.
+
+[Ukubona LLC] 04:49:58
+The admiralty that was given, the name is Simon.
+
+[Ukubona LLC] 04:50:06
+The year he was born is when the telephone.
+
+[Ukubona LLC] 04:50:12
+Read your text.
+
+[Johnny] 04:50:12
+Oh!
+
+[Ukubona LLC] 04:50:15
+So it&#x27;s why they called him is Siku. I mean, he&#x27;s Siku.
+
+[Johnny] 04:50:19
+You too.
+
+[Ukubona LLC] 04:50:20
+You see what means telephone.
+
+[Ukubona LLC] 04:50:22
+Sure.
+
+[Ukubona LLC] 04:50:24
+He was born during the year when the.
+
+[Ukubona LLC] 04:50:28
+I just wanted to come here.
+
+[Ukubona LLC] 04:50:30
+Where here means not in Uganda where we are speaking from.
+
+[Ukubona LLC] 04:50:37
+And, um…
+
+[Ukubona LLC] 04:50:39
+Sure.
+
+[Ukubona LLC] 04:50:41
+That is really the beginning and much of what I&#x27;m going to share with you.
+
+[Ukubona LLC] 04:50:49
+came from the opportunity I had.
+
+[Ukubona LLC] 04:50:55
+of conversing and letting me deal with my father.
+
+[Ukubona LLC] 04:50:57
+And I&#x27;m asking and getting the answers and so on.
+
+[Ukubona LLC] 04:51:01
+But…
+
+[Ukubona LLC] 04:51:03
+The most important thing to recall…
+
+[Ukubona LLC] 04:51:07
+It&#x27;s this that, um…
+
+[Ukubona LLC] 04:51:14
+So many and also princely. Yeah. So.
+
+[Ukubona LLC] 04:51:20
+you&#x27;ll find that.
+
+[Ukubona LLC] 04:51:22
+It is difficult to remember anything without.
+
+[Ukubona LLC] 04:51:26
+Making love for this.
+
+[Ukubona LLC] 04:51:33
+To the children of the city.
+
+[Ukubona LLC] 04:51:36
+But many others, it was…
+
+[Ukubona LLC] 04:51:40
+Is, uh, that of…
+
+[Ukubona LLC] 04:51:45
+And one of us here hates that name.
+
+[Ukubona LLC] 04:51:53
+He even abandoned the name.
+
+[Ukubona LLC] 04:51:59
+Yes.
+
+[Johnny] 04:51:59
+You&#x27;ll notice that my signature has it, so that&#x27;s imposteric.
+
+[Johnny] 04:52:05
+The most important thing…
+
+[Johnny] 04:52:09
+And Daddy, that name, Unkont, I, I, I, I know we have the latitude to move between the bigger abstraction of Baise Gaga.
+
+[Johnny] 04:52:17
+But I know you stopped at Malachi. Is my understanding that that is as far as you go in our history? Or you know the father of Malachi?
+
+[S] 04:52:29
+And just before that, before that, the answers.
+
+[S] 04:52:33
+This one, this…
+
+[Ukubona LLC] 04:52:34
+Charles has a question.
+
+[S] 04:52:35
+Before that, you speak. So I was speaking on that one. I&#x27;m assuming you&#x27;re Yolanda. It looks like they&#x27;re in parallel.
+
+[S] 04:52:51
+Wawanga, while you were significant, maybe one or two, then you may want to.
+
+[S] 04:52:59
+Highlight them.
+
+[Ukubona LLC] 04:52:59
+Not at year anymore.
+
+[S] 04:53:00
+I&#x27;m going to Malachi
+
+[Johnny] 04:53:04
+Okay, that&#x27;s clear.
+
+[Ukubona LLC] 04:53:09
+Mariji.
+
+[Ukubona LLC] 04:53:12
+Yes, Aranu.
+
+[Johnny] 04:53:14
+I&#x27;ll be minute.
+
+[Ukubona LLC] 04:53:17
+Abimeneki Yazala Uzaliko Aguirre.
+
+[Ukubona LLC] 04:53:25
+I didn&#x27;t buy the majority. It&#x27;s not approved of.
+
+[Ukubona LLC] 04:53:29
+Why have I said that now?
+
+[Ukubona LLC] 04:53:32
+Uh, because it was given impromptu today.
+
+[Ukubona LLC] 04:53:37
+Uh, by a force of rules.
+
+[Ukubona LLC] 04:53:42
+And of of mine.
+
+[Ukubona LLC] 04:53:43
+The moment I was born and came down, he said.
+
+[Ukubona LLC] 04:53:50
+He didn&#x27;t give other people the opportunity to name me.
+
+[Ukubona LLC] 04:53:55
+Said and they feared her because he was.
+
+[Ukubona LLC] 04:54:01
+That&#x27;s your auntie.
+
+[Ukubona LLC] 04:54:04
+And they had to give in, so the name was stuck up to this day. Which auntie is this in her name?
+
+[Johnny] 04:54:10
+Who is this?
+
+[Ukubona LLC] 04:54:11
+Oh, that&#x27;s a good, those are the things, you know.
+
+[Johnny] 04:54:14
+It will come back, let&#x27;s…
+
+[Ukubona LLC] 04:54:16
+Patano and Patano. No, that one. Patano and Patano. Patano.
+
+[Johnny] 04:54:20
+Yeah, but I don&#x27;t want.
+
+[Ukubona LLC] 04:54:21
+I know I&#x27;m wearing your Mustardy.
+
+[Johnny] 04:54:23
+Mi muzur.
+
+[Ukubona LLC] 04:54:26
+But at this point, since I&#x27;m remembering some practice.
+
+[Ukubona LLC] 04:54:32
+In those days, in order to make sure.
+
+[Ukubona LLC] 04:54:36
+that the child is given the right name in the shippers.
+
+[Ukubona LLC] 04:54:40
+of names, they would do fortitude.
+
+[Ukubona LLC] 04:54:47
+Through cocks, cocks on the roof of the house.
+
+[Ukubona LLC] 04:54:54
+Prove whichever falls down first after they are given them names.
+
+[Johnny] 04:54:59
+Given the cook&#x27;s names.
+
+[Ukubona LLC] 04:55:01
+Yes. Zero.
+
+[S] 04:55:03
+Uh-huh.
+
+[Ukubona LLC] 04:55:06
+Whoever comes down first, ah, then.
+
+[Ukubona LLC] 04:55:13
+Oh, this is all the cooks.
+
+[Ukubona LLC] 04:55:15
+if the two cocks.
+
+[Ukubona LLC] 04:55:17
+Both of them refuse to fall down. Both names are wrong. Then they say this might not be our child.
+
+[Ukubona LLC] 04:55:29
+But then the clarification was in when the two cogs invoked when the child was having symptoms, some problems crying.
+
+[Ukubona LLC] 04:55:39
+Yeah, that&#x27;s, yeah, that&#x27;s a good question.
+
+[Ukubona LLC] 04:55:45
+I was crying all the time. They began to suspect that I have, the cooks have rejected both names.
+
+[Ukubona LLC] 04:55:55
+And, uh…
+
+[Ukubona LLC] 04:55:57
+There must be further consultations. They will not just reject the person out of the car, they will simply…
+
+[Ukubona LLC] 04:56:06
+Let us ask more questions.
+
+[Ukubona LLC] 04:56:08
+That is when they say, oh yeah, actually this one should have been named first.
+
+[Ukubona LLC] 04:56:15
+Then again, you throw the chickens back.
+
+[Johnny] 04:56:17
+Another time.
+
+[Johnny] 04:56:19
+So, so, Daddy, along the paternal line.
+
+[Ukubona LLC] 04:56:22
+Mmm.
+
+[Johnny] 04:56:22
+we have at least been able to capture four generations, from us, to you, to Abimerechi, to Malachi, to Nkonte. Is there any…
+
+[Johnny] 04:56:36
+oral history of a direct Patano ancestor above Unconto.
+
+[Ukubona LLC] 04:56:45
+Now, unfortunately.
+
+[Ukubona LLC] 04:56:48
+We had that person who.
+
+[Ukubona LLC] 04:56:52
+was the attitudes and his name was Cairo County, no, sorry, Cairo Safadia.
+
+[Ukubona LLC] 04:57:01
+You didn&#x27;t see this one, did you? Yeah.
+
+[Johnny] 04:57:03
+Of course, of course we did.
+
+[Ukubona LLC] 04:57:08
+Oh, you know him? Yeah.
+
+[Ukubona LLC] 04:57:14
+The history of us, especially putting in the right order, the children of the Chi-C-C-C.
+
+[Ukubona LLC] 04:57:22
+And…
+
+[Ukubona LLC] 04:57:24
+The ones…
+
+[Ukubona LLC] 04:57:27
+He would he would tell us
+
+[Ukubona LLC] 04:57:34
+These children of Chichi were given according to where they were.
+
+[Ukubona LLC] 04:57:42
+The region of
+
+[Ukubona LLC] 04:57:45
+For instance, those born…
+
+[Ukubona LLC] 04:57:48
+In Rurangi, those we are called the Karangi, those, you know, they were given various names, but.
+
+[Ukubona LLC] 04:57:58
+When I, all I know is that the chiefs.
+
+[Ukubona LLC] 04:58:01
+I mean the the the chief chief.
+
+[Ukubona LLC] 04:58:06
+would locate his sons.
+
+[Ukubona LLC] 04:58:09
+Everybody else, bad sort of music.
+
+[Ukubona LLC] 04:58:12
+And
+
+[Ukubona LLC] 04:58:14
+They would do
+
+[Ukubona LLC] 04:58:16
+They&#x27;re given names according to the location where they were ruling.
+
+[Ukubona LLC] 04:58:21
+For example…
+
+[Ukubona LLC] 04:58:26
+Burangi was…
+
+[Ukubona LLC] 04:58:30
+The place where karangi comes from
+
+[Ukubona LLC] 04:58:36
+So Bukonta? Bukonta from Bukonta. Although Bukonta, there is something fun about the name.
+
+[Ukubona LLC] 04:58:44
+That was a mannerism of the what? Of the dashboard.
+
+[Ukubona LLC] 04:58:50
+that son of his
+
+[Ukubona LLC] 04:58:52
+He was very cruel
+
+[Ukubona LLC] 04:58:55
+And if any, any subject did not obey.
+
+[Ukubona LLC] 04:59:02
+There&#x27;s only one sentence, one punishment, go and break his house.
+
+[Ukubona LLC] 04:59:09
+And
+
+[Ukubona LLC] 04:59:11
+All the ones he has.
+
+[Ukubona LLC] 04:59:14
+And bring them with so.
+
+[Ukubona LLC] 04:59:18
+When will you hear of one country?
+
+[Ukubona LLC] 04:59:21
+He wasn&#x27;t easy.
+
+[Ukubona LLC] 04:59:25
+He would order.
+
+[Ukubona LLC] 04:59:27
+I mean, do you turn up for the meeting? If you don&#x27;t turn up for the meeting?
+
+[Ukubona LLC] 04:59:35
+Oh, no, if you notice that now for this, this is essential to us as actually public.
+
+[Ukubona LLC] 04:59:43
+forced labor.
+
+[Ukubona LLC] 04:59:45
+If they want you to, if they want an area to be cleaned.
+
+[Ukubona LLC] 04:59:51
+Now it is coming back
+
+[Ukubona LLC] 04:59:53
+Back door, every Wednesday we do it. Saturday, end of last Saturday of every month. Uganda as a whole, every Wednesday.
+
+[Ukubona LLC] 05:00:04
+You have to clean up.
+
+[Ukubona LLC] 05:00:07
+So this one —.
+
+[Ukubona LLC] 05:00:11
+Started a long time ago, there was forced labor. Make sure that labor that is needed by the entire area.
+
+[Ukubona LLC] 05:00:21
+would be
+
+[Ukubona LLC] 05:00:24
+They are the name, but they used to call it .
+
+[Ukubona LLC] 05:00:29
+Ugwara is a forced labour.
+
+[Ukubona LLC] 05:00:32
+You have to go.
+
+[Ukubona LLC] 05:00:35
+But firstly, bad many layers.
+
+[Ukubona LLC] 05:00:41
+Uh, there was one…
+
+[Ukubona LLC] 05:00:43
+at the local level, then the one at the city level.
+
+[Ukubona LLC] 05:00:51
+And this was, uh…
+
+[Ukubona LLC] 05:00:53
+Accompanied by labor.
+
+[Ukubona LLC] 05:00:59
+was created by Ava Zoom White.
+
+[Ukubona LLC] 05:01:03
+Because they needed labor.
+
+[Ukubona LLC] 05:01:07
+Growth. I&#x27;m into.
+
+[Ukubona LLC] 05:01:09
+constructed roads
+
+[Ukubona LLC] 05:01:11
+That one was.
+
+[Ukubona LLC] 05:01:14
+for slavery.
+
+[Ukubona LLC] 05:01:16
+And they would go in turns.
+
+[Ukubona LLC] 05:01:19
+Uh, so the time, the time you go, they say.
+
+[Ukubona LLC] 05:01:26
+I could try to do what the water means tons
+
+[Ukubona LLC] 05:01:31
+And Oluwaru would take a month.
+
+[Ukubona LLC] 05:01:38
+So it was hated, especially by men. They were forced to leave their wives.
+
+[Ukubona LLC] 05:01:45
+And there was no way of making sure that the wife was safe.
+
+[Johnny] 05:01:47
+Yeah.
+
+[Johnny] 05:01:51
+See ya.
+
+[Johnny] 05:01:54
+Daddy, I&#x27;m curious about… you can go ahead, but at some point, just to keep at the back of your mind, we will ask about our Matano heritage also.
+
+[Johnny] 05:02:09
+What is the…
+
+[Ukubona LLC] 05:02:10
+Okay, so…
+
+[Ukubona LLC] 05:02:13
+was the…
+
+[Ukubona LLC] 05:02:15
+What now I&#x27;ve come to understand to be a mojito.
+
+[Ukubona LLC] 05:02:20
+Our origin is from Bunyoro, but we are also from Bunyoro, but this one was in that ruling clan.
+
+[Johnny] 05:02:31
+Hmm.
+
+[Ukubona LLC] 05:02:31
+She was immovito.
+
+[Ukubona LLC] 05:02:38
+But, uh…
+
+[Ukubona LLC] 05:02:40
+They were first, these people were first to further divide, subdivided.
+
+[Ukubona LLC] 05:02:46
+Those who were in Bukonti, Sabukonti, and not Bukonti, Bukono.
+
+[Ukubona LLC] 05:02:55
+We are Babito from Woolamoj.
+
+[Ukubona LLC] 05:02:59
+Now, what I&#x27;m going to do is, uh…
+
+[Ukubona LLC] 05:03:02
+one of the major subdivision of war.
+
+[Ukubona LLC] 05:03:09
+Subdivisions of our clan, of the Kesar&#x27;s clan.
+
+[Ukubona LLC] 05:03:15
+And, uh…
+
+[Ukubona LLC] 05:03:19
+I think that is as far as I can go as the question is concerned.
+
+[Ukubona LLC] 05:03:24
+As far as the customer is concerned.
+
+[Johnny] 05:03:27
+We have no recollection of her father or mother.
+
+[Ukubona LLC] 05:03:31
+Oh, yes.
+
+[Ukubona LLC] 05:03:33
+First of all, there was a genetic name for all Babito of Ukwuno.
+
+[Ukubona LLC] 05:03:43
+But what I used to hear, because they would take us from time to time, we would go to Bokono.
+
+[Ukubona LLC] 05:03:52
+And we had the opportunity to hear.
+
+[Ukubona LLC] 05:03:55
+from the horse&#x27;s own mouth. You could hear them calling out their names.
+
+[Ukubona LLC] 05:04:02
+And.
+
+[Ukubona LLC] 05:04:05
+The great names, the greatest as far as we are concerned was William Pimba.
+
+[Ukubona LLC] 05:04:11
+I said, but this is a funny name. Why Mulan Pembro?
+
+[Ukubona LLC] 05:04:17
+Understood the will.
+
+[Ukubona LLC] 05:04:20
+that means.
+
+[Ukubona LLC] 05:04:21
+that he was interested in the younger women.
+
+[Ukubona LLC] 05:04:30
+No.
+
+[Ukubona LLC] 05:04:33
+The chicken is really young. In modern language, they call them chicks. So that&#x27;s funny, Timoine.
+
+[S] 05:04:45
+Candy now, you&#x27;re really connecting. Oh my god, okay, okay.
+
+[Ukubona LLC] 05:04:48
+That&#x27;s what it is
+
+[Johnny] 05:04:53
+Yeah.
+
+[Ukubona LLC] 05:04:58
+That&#x27;s very funny. Okay. So that is a generic name used for Ikesa&#x27;s dad.
+
+[Johnny] 05:05:01
+So those are generic names
+
+[Johnny] 05:05:07
+There are no actual names we know.
+
+[Ukubona LLC] 05:05:09
+No, no actual names, but this, some of the names came from.
+
+[Ukubona LLC] 05:05:15
+Jokes.
+
+[Ukubona LLC] 05:05:18
+Mm. That&#x27;s where these people generally are. They are drunk. They&#x27;re drunk.
+
+[S] 05:05:20
+That&#x27;s it.
+
+[Johnny] 05:05:22
+You&#x27;re a joker.
+
+[Ukubona LLC] 05:05:30
+I think there&#x27;s a major name. A major name. He was interested in the anger. The chicks.
+
+[S] 05:05:36
+Okay.
+
+[Johnny] 05:05:39
+So, so Daddy Kusaidi Aikesa, my understanding is the, the name that we know, Kubanga?
+
+[Johnny] 05:05:46
+The name, of course, Tweed Soyji, who was, uh…
+
+[Ukubona LLC] 05:05:50
+Sibling.
+
+[Johnny] 05:05:54
+But the generation above, because towards… we went with you and Charles to Bukono.
+
+[Johnny] 05:06:02
+And we met your uncles there.
+
+[Johnny] 05:06:05
+Who actually did you have names, and you&#x27;ve addressed them by name?
+
+[Ukubona LLC] 05:06:11
+Those names are, you know, are still relevant.
+
+[Johnny] 05:06:17
+Mmm.
+
+[Ukubona LLC] 05:06:17
+And uh…
+
+[Ukubona LLC] 05:06:21
+They are the the funny ones actually are are really more ancient than I have made them.
+
+[Johnny] 05:06:28
+Hmm.
+
+[Ukubona LLC] 05:06:30
+It&#x27;s on a tissue.
+
+[Ukubona LLC] 05:06:32
+Sure.
+
+[Ukubona LLC] 05:06:36
+Liang Tingba is more ancient.
+
+[Johnny] 05:06:39
+Yes.
+
+[Ukubona LLC] 05:06:40
+Mulian Pimba, you managed to see where we visited.
+
+[Ukubona LLC] 05:06:45
+It goes back some generations.
+
+[Ukubona LLC] 05:06:50
+Because people were named help or were named after.
+
+[Ukubona LLC] 05:06:55
+Their behavior.
+
+[Ukubona LLC] 05:06:57
+What they, the things they did and so on.
+
+[Johnny] 05:07:00
+Interesting.
+
+[S] 05:07:08
+It&#x27;s the most famous name I can recollect.
+
+[Ukubona LLC] 05:07:13
+So some of you may not know why you may be interested in very young people who started long ago.
+
+[S] 05:07:27
+You mean some generic genetic heritage
+
+[Ukubona LLC] 05:07:31
+The most the most ancient person I recall is that one.
+
+[Johnny] 05:07:46
+Daddy, Daddy, what are your reflections? Why do you think, for example, that the… the names, Kusaid, Yay, Kesa.
+
+[Johnny] 05:07:55
+The recall when you when you think about it, why the recall?
+
+[Johnny] 05:08:01
+Uh, of actualimskusaidiya ikesa is not as clear.
+
+[Johnny] 05:08:07
+As
+
+[Johnny] 05:08:09
+Is it that you just spent less time with these people, or did they actually not have these names?
+
+[S] 05:08:17
+And and can I come in there before that you speak just to recollection?
+
+[S] 05:08:29
+Is it Mugumba? But in any case, when we tried Jebu Konte, there were two homes, I think, two kinds of homes. One here, I&#x27;m… can you remember? Yeah, from Zee.
+
+[Johnny] 05:08:40
+You mean Ebukono, rather?
+
+[S] 05:08:42
+And there was another, another family, Kwagamba.
+
+[Johnny] 05:08:46
+Yes, yes.
+
+[S] 05:08:47
+You kept on breaking this up. Where do we end up?
+
+[S] 05:08:53
+What do you mean by that? Broken up. I&#x27;m coming up from another one.
+
+[Ukubona LLC] 05:08:59
+That is the product.
+
+[S] 05:09:00
+And you are pronouncing them Okuba, so you, we need that kind of background, Iona Iona Trijetag.
+
+[Ukubona LLC] 05:09:07
+The landlord was going to other.
+
+[Ukubona LLC] 05:09:12
+to other clones.
+
+[Ukubona LLC] 05:09:14
+There was this thing called polygamy.
+
+[Ukubona LLC] 05:09:18
+So…
+
+[Ukubona LLC] 05:09:21
+That&#x27;s why you see names being repeated and repeated and repeated.
+
+[Ukubona LLC] 05:09:35
+So I, I take over almost the name of my, my mother. Ah, interesting.
+
+[Johnny] 05:09:45
+Hmm.
+
+[Johnny] 05:09:45
+Because of polyglot.
+
+[Ukubona LLC] 05:09:51
+I&#x27;m not here on the Zoom.
+
+[Ukubona LLC] 05:09:53
+Italian museum.
+
+[Ukubona LLC] 05:09:56
+I can tell you it means mother, father. He&#x27;s a father.
+
+[S] 05:10:00
+The father.
+
+[Ukubona LLC] 05:10:01
+It&#x27;s losing. Why? You had a driver. Ah. Now, very few people could drive a vehicle.
+
+[Ukubona LLC] 05:10:11
+So.
+
+[Ukubona LLC] 05:10:22
+Avogamoto Ka.
+
+[Ukubona LLC] 05:10:26
+So we, we had a special, special client of our own because we.
+
+[Ukubona LLC] 05:10:35
+To see a Black person steering a vehicle and going to races, this was extra status.
+
+[Ukubona LLC] 05:10:45
+In addition to being .
+
+[S] 05:10:47
+Hmm.
+
+[Ukubona LLC] 05:11:04
+The literary is the correct meaning. That&#x27;s what you said. Yeah.
+
+[Johnny] 05:11:07
+Yes.
+
+[Johnny] 05:11:09
+Because, and that is why I&#x27;m saying, that&#x27;s why I was, I was pushing back with Daddy as like, the names on the Patano side come easily. I, when it comes to Ikesas, we are dealing with abstractions of, of, of, of name.
+
+[Ukubona LLC] 05:11:24
+Behaviors. That is it. Behaviors.
+
+[Ukubona LLC] 05:11:28
+Behaved after behaviors. I&#x27;m.
+
+[Johnny] 05:11:30
+Well, those are the actual names.
+
+[S] 05:11:32
+But we want some of the names. I mean, who is the father of Mosaic, for example?
+
+[Ukubona LLC] 05:11:32
+Hmm? Yeah.
+
+[S] 05:11:40
+Who is the father of his other, the other gentleman, Akariwo? There were those two people.
+
+[Johnny] 05:11:46
+But what are the names of those people first?
+
+[S] 05:11:51
+What, what, what, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who, who.
+
+[Ukubona LLC] 05:11:54
+Anyway, mm-hmm.
+
+[Ukubona LLC] 05:12:00
+Here you go, Ma.
+
+[Ukubona LLC] 05:12:02
+Thierry Omukwua.
+
+[Johnny] 05:12:03
+Okay.
+
+[Ukubona LLC] 05:12:05
+There was the older, the oldest pioneers.
+
+[Ukubona LLC] 05:12:10
+Igema happened also to be the first person to get actual education.
+
+[Ukubona LLC] 05:12:18
+He went to…
+
+[Ukubona LLC] 05:12:20
+Tree ganga.
+
+[Ukubona LLC] 05:12:22
+And got his primary.
+
+[Ukubona LLC] 05:12:24
+Primary living certificate.
+
+[Ukubona LLC] 05:12:27
+But unfortunate today.
+
+[Ukubona LLC] 05:12:31
+He was left to be with Ikesa because Ikesa was considered.
+
+[Ukubona LLC] 05:12:39
+a more sophisticated person.
+
+[Ukubona LLC] 05:12:41
+And so he was, he was posted to Ikesa&#x27;s home.
+
+[Ukubona LLC] 05:12:47
+And that is how we linked up. And he became a very central person.
+
+[Ukubona LLC] 05:12:56
+in connecting us to modernity because he went to school where?
+
+[Ukubona LLC] 05:13:02
+I don&#x27;t know how he got there, but he was in Ganga and became acquainted by then what they used to call junior secondary school.
+
+[Ukubona LLC] 05:13:13
+Junior Secondary Three.
+
+[Ukubona LLC] 05:13:16
+And then after that.
+
+[Ukubona LLC] 05:13:18
+Do you have this?
+
+[Ukubona LLC] 05:13:20
+sent to Bukonti. There was a private school by Bukonti.
+
+[Ukubona LLC] 05:13:26
+A man called Casada was an educationist.
+
+[Ukubona LLC] 05:13:31
+And when he retired, he set up a private school for the book on the training school.
+
+[Ukubona LLC] 05:13:38
+And that is what they are attracted to.
+
+[Ukubona LLC] 05:13:44
+I&#x27;ve attracted a gamer to come to us.
+
+[S] 05:13:46
+Who is the Gemma? Who is the Gemma Nilatawan? Nilatawan is the Nilatawan G.
+
+[Johnny] 05:13:49
+Who is that? Is there any biological relationship?
+
+[S] 05:13:52
+What is the relationship to that? Is it the father? Is it the…
+
+[Ukubona LLC] 05:13:52
+No.
+
+[S] 05:13:57
+Who is he, actually? Go back to college for now.
+
+[Ukubona LLC] 05:14:01
+He was, uh…
+
+[Johnny] 05:14:06
+Maybe not, maybe not.
+
+[Ukubona LLC] 05:14:07
+I said, no, no, they were close.
+
+[Ukubona LLC] 05:14:11
+But the different parts. Different. Different.
+
+[Johnny] 05:14:22
+That may not be available to us.
+
+[S] 05:14:24
+Okay, it&#x27;s not available, okay.
+
+[Ukubona LLC] 05:14:26
+Yeah, I think for me, I&#x27;m actually very amused because Daddy&#x27;s mood is very different when he&#x27;s describing Abimedes&#x27; side .
+
+[Johnny] 05:14:38
+And we are going to get to the bottom of that.
+
+[Ukubona LLC] 05:14:40
+Yes, it&#x27;s very distinct. So Zemi, I&#x27;m just going to ask you on one side versus the other.
+
+[Johnny] 05:14:47
+But… but do you know one thing that… that I… I think we can do, and we can bounce back?
+
+[Ukubona LLC] 05:14:54
+Yeah.
+
+[Johnny] 05:14:55
+But, Daddy, I would like to ask a question. What is your earliest childhood memory?
+
+[Johnny] 05:15:05
+Your earliest.
+
+[Ukubona LLC] 05:15:10
+That is a very difficult question to answer positively.
+
+[Johnny] 05:15:13
+Okay
+
+[Ukubona LLC] 05:15:14
+Conceptualizations.
+
+[Johnny] 05:15:15
+It&#x27;s not conceptualization.
+
+[S] 05:15:17
+I I I I can I can I can give an example, Daddy.
+
+[S] 05:15:20
+When I was very young, I was living, I remember Mombasa, for example.
+
+[S] 05:15:26
+I remember Mombasa, somehow, I don&#x27;t remember Nairobi, but I remember Mombasa, palm trees, coconuts, and things like that. I remember that very vividly. Secondly, and, you know, it was just pleasant. It was a really nice kind of life. The rest I don&#x27;t have, but…
+
+[Johnny] 05:15:36
+Yes.
+
+[S] 05:15:44
+You need to clarify all the time. You need Uncle George.
+
+[Johnny] 05:15:47
+You.
+
+[Johnny] 05:15:51
+Yeah.
+
+[S] 05:15:51
+What is this National Park? Queen Elizabeth National Park. The gas station is located near the toilets.
+
+[Johnny] 05:15:57
+Oh, really?
+
+[S] 05:16:05
+Because the trailhead was not tidaling, a sort of contain, don&#x27;t you? You know, trailheads can evacuate a good distance, like 10 meters away. And then, and then hippos started grazing, grazing outside.
+
+[Johnny] 05:16:09
+Yes.
+
+[S] 05:16:18
+I stayed in that toilet for the rest of the night. I couldn&#x27;t come out.
+
+[S] 05:16:23
+So I I have, I have those early memories.
+
+[Johnny] 05:16:24
+Whoa.
+
+[Johnny] 05:16:30
+And, Charlie, do you know one thing?
+
+[S] 05:16:31
+What do you remember, Evi Soka, the earliest stage, Evi Ida?
+
+[Johnny] 05:16:35
+And why it doesn&#x27;t have to be abstract. Of course, there are things that took place before your earliest recollection, but we are just talking, daddy, about the earliest you recall. Of course, it doesn&#x27;t have to be when you were one year old, but it&#x27;s just…
+
+[Ukubona LLC] 05:16:45
+So…
+
+[Ukubona LLC] 05:16:49
+I&#x27;m going to say good.
+
+[Johnny] 05:16:49
+It&#x27;s a story we just want.
+
+[Ukubona LLC] 05:16:50
+I&#x27;m going to suggest something, and I see it in many great storytellers.
+
+[Ukubona LLC] 05:16:56
+they do not go chronologically, because the human mind doesn&#x27;t do that. You can be telling a story about Berkeley, Mackay, then boom, a recollection of China comes up.
+
+[Johnny] 05:17:06
+Okay, that
+
+[S] 05:17:07
+You remember the first year?
+
+[Johnny] 05:17:09
+That is fine, so let us remove the word alias.
+
+[Ukubona LLC] 05:17:09
+Yeah, yeah. Because I see we&#x27;re pushing daddy to go from his parents to his earliest childhood. But actually, his childhood memories will pop up sometime later. I think they will pop up, and then we can…
+
+[Johnny] 05:17:14
+Okay.
+
+[Johnny] 05:17:25
+They, they, they, they will come back, because I…
+
+[Ukubona LLC] 05:17:27
+When the opportunity comes, you can go for it and squeeze out as much.
+
+[Johnny] 05:17:30
+Yes, because I have some very…
+
+[Johnny] 05:17:35
+early childhood memories Daddy has talked about, but this is not about me, which he has shared very early, and even when he was taken, Kusaidia Ikesa, but that will come back at a later… it&#x27;s for Daddy to process that.
+
+[Ukubona LLC] 05:17:42
+Yeah.
+
+[Ukubona LLC] 05:17:50
+Yeah, okay.
+
+[Johnny] 05:17:50
+Um, yeah.
+
+[Johnny] 05:17:52
+Okay.
+
+[S] 05:17:53
+OK, moving on to maybe the school, especially whatever.
+
+[Ukubona LLC] 05:17:56
+Yeah, yeah. So, Charles.
+
+[Ukubona LLC] 05:18:01
+So, Charles, I…
+
+[S] 05:18:01
+Oh, anything, anything, anything he wants to say.
+
+[Ukubona LLC] 05:18:03
+Charles, I can suggest that maybe you use the Navuiso framework whenever, uh, Daddy runs out of what he&#x27;s talking about, then you look in the… in your Navuiso framework and pick a next topic.
+
+[Johnny] 05:18:04
+From the children.
+
+[S] 05:18:11
+Oh.
+
+[S] 05:18:16
+Yes. So would you say that the next topic area, Kusuma?
+
+[Ukubona LLC] 05:18:16
+I don&#x27;t know something like that.
+
+[Johnny] 05:18:19
+Okusoma, yeah.
+
+[S] 05:18:21
+Yes, for me, that was.
+
+[S] 05:18:23
+Uh, because…
+
+[Johnny] 05:18:30
+Early childhood.
+
+[S] 05:18:32
+I somehow I can&#x27;t get from number to number how that leap was made to meeting.
+
+[Ukubona LLC] 05:18:37
+for my education.
+
+[S] 05:18:37
+And, uh, and all that stuff, yeah.
+
+[Ukubona LLC] 05:18:41
+There&#x27;s this education from the church.
+
+[Ukubona LLC] 05:18:48
+Our father, or my father, I&#x27;ve been managing.
+
+[Ukubona LLC] 05:18:57
+was, as I told you before, the son of Malachi.
+
+[Ukubona LLC] 05:19:03
+And Malachi was the owner of a certain plant.
+
+[Ukubona LLC] 05:19:11
+over Bukonta. He was a Moruga, not a Moroccan.
+
+[Ukubona LLC] 05:19:18
+Well, it is so good to you.
+
+[Ukubona LLC] 05:19:20
+And for that, in that position, he was…
+
+[Ukubona LLC] 05:19:25
+Able.
+
+[Ukubona LLC] 05:19:27
+to allocate land.
+
+[Ukubona LLC] 05:19:30
+to the church.
+
+[Ukubona LLC] 05:19:32
+You call it now the Church of Uganda. Uganda. Oh, Uganda.
+
+[Ukubona LLC] 05:19:38
+So there&#x27;s — and that place, Yellow Cape, they call it Mayo.
+
+[Ukubona LLC] 05:19:45
+My area, Kandisa, Tuareg, located by —.
+
+[S] 05:19:50
+Maryland, yeah.
+
+[Ukubona LLC] 05:19:53
+And that is how they came to call us Abashoni.
+
+[Ukubona LLC] 05:19:59
+Hmm. We were pro church.
+
+[Ukubona LLC] 05:20:02
+And so…
+
+[Ukubona LLC] 05:20:05
+Marachi.
+
+[Ukubona LLC] 05:20:08
+We are Tiachi people.
+
+[Ukubona LLC] 05:20:11
+And, uh…
+
+[Ukubona LLC] 05:20:13
+We were at the other extreme in comparison to.
+
+[Ukubona LLC] 05:20:29
+Because I was a non-Christian. Traditional. Non-traditional.
+
+[Ukubona LLC] 05:20:34
+And so we had the tool.
+
+[Ukubona LLC] 05:20:39
+Two leg, one leg was in the present.
+
+[Ukubona LLC] 05:20:43
+And the other one was in the past. In the past.
+
+[S] 05:20:47
+The tradition, hmm.
+
+[Ukubona LLC] 05:20:49
+Whenever we were taken to program, we were really . At what age? What age, Daddy?
+
+[Johnny] 05:21:05
+No, that one, maybe not.
+
+[Ukubona LLC] 05:21:07
+I don&#x27;t know, it&#x27;s better than drinking. I&#x27;m curious to know.
+
+[Johnny] 05:21:12
+You want to bring…
+
+[Ukubona LLC] 05:21:17
+One trick.
+
+[Ukubona LLC] 05:21:18
+Marwa. Marwa.
+
+[Ukubona LLC] 05:21:21
+And you can&#x27;t estimate some edge, alias edge.
+
+[Ukubona LLC] 05:21:27
+Five. Five, there you go. Jay, up.
+
+[Johnny] 05:21:29
+You see, there you go, those are the alias.
+
+[Ukubona LLC] 05:21:34
+And it tasted just so well. It tasted good. I&#x27;m alright.
+
+[S] 05:21:39
+It was Swedish. The mara is Swedish because it comes from bananas. Banana.
+
+[Ukubona LLC] 05:21:43
+Oh, yes, but right by then.
+
+[S] 05:21:44
+It comes from Banana. They just put me there, so it is sweet, actually.
+
+[Ukubona LLC] 05:21:49
+No, not banana. A. Millet. Millet?
+
+[S] 05:21:52
+But with bananas, eh? But I&#x27;m a little bit more bananas.
+
+[Johnny] 05:21:56
+No, there is no banana in Maru.
+
+[Ukubona LLC] 05:21:56
+Different alcohol. That&#x27;s a different one. Yeah, millet. Millet, and this is the process.
+
+[Johnny] 05:22:03
+And what&#x27;s forgotten?
+
+[Ukubona LLC] 05:22:05
+The process?
+
+[S] 05:22:05
+Kim Moon, give
+
+[Ukubona LLC] 05:22:09
+Not that one. The process there, do you think? The process of making marijuana.
+
+[S] 05:22:15
+Hmm.
+
+[Ukubona LLC] 05:22:15
+First of all, you get minutes.
+
+[Ukubona LLC] 05:22:19
+It is grown.
+
+[Ukubona LLC] 05:22:23
+And, uh…
+
+[Ukubona LLC] 05:22:25
+Then they also.
+
+[Ukubona LLC] 05:22:27
+ferment it.
+
+[Ukubona LLC] 05:22:31
+Part of the process.
+
+[Ukubona LLC] 05:22:34
+And this processing, I mean, this —.
+
+[Ukubona LLC] 05:22:40
+What do you call it?
+
+[Ukubona LLC] 05:22:44
+You get, first of all, you get a bro and grind it. Mm-hmm.
+
+[Ukubona LLC] 05:22:50
+And after you have ground it, you ferment it.
+
+[Ukubona LLC] 05:22:56
+For 4 days.
+
+[Ukubona LLC] 05:22:59
+And, uh…
+
+[Ukubona LLC] 05:23:03
+Off of that.
+
+[Ukubona LLC] 05:23:07
+You put it, yeah, you ferment it, put it underground.
+
+[Ukubona LLC] 05:23:12
+Get it out.
+
+[Ukubona LLC] 05:23:14
+And then we&#x27;ll do this.
+
+[Ukubona LLC] 05:23:16
+Guanica. You know what Guanica is? Yes.
+
+[Ukubona LLC] 05:23:23
+You look as if you should be ahead of everyone.
+
+[S] 05:23:29
+I remember, I remember that, but describe the process.
+
+[Ukubona LLC] 05:23:35
+Mm-hmm.
+
+[S] 05:23:37
+Yeah, yeah.
+
+[Ukubona LLC] 05:23:42
+If you want to eat it in that form. So the important thing is that you had that.
+
+[Ukubona LLC] 05:23:51
+Manuel.
+
+[Ukubona LLC] 05:23:53
+And that the chief swim in Ukona.
+
+[Ukubona LLC] 05:23:58
+I&#x27;m sure.
+
+[Ukubona LLC] 05:24:01
+You will see wonderful company when people drink.
+
+[S] 05:24:09
+But when there are elements, most, yeah, hmm.
+
+[Ukubona LLC] 05:24:12
+And of course, as a human being, so do.
+
+[Ukubona LLC] 05:24:16
+They would annoy each other over women.
+
+[Ukubona LLC] 05:24:22
+Actually, I&#x27;m not sure where I&#x27;m wearing that. Oh, I&#x27;m sure.
+
+[Johnny] 05:24:30
+It seems… it seems like there was, uh…
+
+[Ukubona LLC] 05:24:37
+After, yes. After drinking for some time, they would fall.
+
+[Johnny] 05:24:45
+It&#x27;s interesting, when it comes to recall, we had much better chronology of your paternocide, but there seems to be much more interesting anecdote now about life.
+
+[Ukubona LLC] 05:24:59
+That&#x27;s it. Bukonto is one special. So, Jay, to use modern language, you can get a more linear narrative from Bukonto&#x27;s side, and this side, it can&#x27;t be linear. You have to let it.
+
+[Johnny] 05:25:04
+What&#x27;s special?
+
+[Johnny] 05:25:13
+No, no, no, that… that is fine, but that…
+
+[Johnny] 05:25:17
+I&#x27;ll just speak a bit to this dynamic. You moving between a Wabi Merechi and a Merechi.
+
+[Johnny] 05:25:26
+How did you end up moving between these two places?
+
+[Ukubona LLC] 05:25:30
+And… what about Sunday?
+
+[Ukubona LLC] 05:25:33
+from from where you have a show me if we were no.
+
+[Ukubona LLC] 05:25:40
+Because you are more than, also mean little more than.
+
+[Ukubona LLC] 05:25:46
+Where&#x27;s Nunavut?
+
+[Ukubona LLC] 05:25:48
+Okay, so I was only, and they are not complying with requirements.
+
+[Ukubona LLC] 05:25:55
+They are going to die by Babasomi instead of going to divorce.
+
+[Johnny] 05:26:03
+And where were these busways you were, Ewa Ikesa?
+
+[Ukubona LLC] 05:26:04
+And the Kaguna.
+
+[Ukubona LLC] 05:26:07
+There&#x27;s a name there, Kaguna. Kaguna was my grandmother.
+
+[Johnny] 05:26:14
+Now we have a name. Is that Patano or Matano?
+
+[Ukubona LLC] 05:26:18
+Atena. Atena.
+
+[Johnny] 05:26:20
+Matano now.
+
+[Ukubona LLC] 05:26:21
+In the Kaguna
+
+[S] 05:26:22
+Ukuna.
+
+[Ukubona LLC] 05:26:23
+Kaguna was…
+
+[Johnny] 05:26:23
+Okay, we have a name now.
+
+[S] 05:26:26
+Hmm.
+
+[Ukubona LLC] 05:26:28
+in her own way because she was known for that religion of hers.
+
+[Ukubona LLC] 05:26:34
+She was more or less a priest.
+
+[Johnny] 05:26:37
+Hi, Priestess.
+
+[S] 05:26:38
+Is there, is there a link between the bachuzzi and the abasuizi?
+
+[Johnny] 05:26:43
+And if I say go, go, yes.
+
+[Ukubona LLC] 05:26:45
+And who&#x27;s retarded? Daddy, I just asked you. Daddy, yes. Daddy, Charles has just asked. Charles, repeat.
+
+[S] 05:26:50
+What is your link between Navajois and Navajois, the modern Navajois we know, the Navajois dynasty?
+
+[Johnny] 05:26:56
+Yes
+
+[Ukubona LLC] 05:26:59
+Uh-huh, okay. Yes, the answer is yes, yeah.
+
+[S] 05:27:01
+Okay, okay, interesting.
+
+[Ukubona LLC] 05:27:06
+And there&#x27;s more.
+
+[Ukubona LLC] 05:27:09
+I want to go into church. What is it called? Shrine. Shrine. The shrine.
+
+[S] 05:27:13
+Hmm.
+
+[Ukubona LLC] 05:27:14
+and people to come.
+
+[Ukubona LLC] 05:27:19
+From CURE. CURE. Oh, yeah. Let me see.
+
+[Ukubona LLC] 05:27:25
+Divining, divining. So he will come with baskets.
+
+[S] 05:27:33
+Mmm.
+
+[Ukubona LLC] 05:27:33
+and the.
+
+[Ukubona LLC] 05:27:35
+Take it to her shrine and then she would change and go to them. They accompany her to her shrine.
+
+[S] 05:27:44
+Mm-hmm.
+
+[Ukubona LLC] 05:27:44
+And then she.
+
+[Ukubona LLC] 05:27:46
+She had shakers, goats with the seeds.
+
+[S] 05:27:50
+Goats, yeah. Mm-hmm.
+
+[Ukubona LLC] 05:27:52
+No.
+
+[Johnny] 05:27:55
+And this was Kaguna.
+
+[Ukubona LLC] 05:27:56
+I do actually fear.
+
+[Ukubona LLC] 05:28:05
+Awesome, hello! Andrew, now we&#x27;re…
+
+[Johnny] 05:28:07
+And this is Ikesa&#x27;s mother.
+
+[S] 05:28:10
+I had a bit of that, which we used to scare us when we were young. The shrines were small huts
+
+[Ukubona LLC] 05:28:19
+You know, uh…
+
+[S] 05:28:19
+Somewhere under tree, right?
+
+[Ukubona LLC] 05:28:21
+Continue your charade.
+
+[Johnny] 05:28:24
+So, Daddy, my question… I don&#x27;t want to lose that trail of thought. When you are in Bukono, Kusaidiya.
+
+[Ukubona LLC] 05:28:33
+I have a different impression.
+
+[Johnny] 05:28:36
+Where is Abimelechi? Is he the one who used to bring you there? Because Abimelechi comes from a much more, you know, uh…
+
+[Johnny] 05:28:45
+Narrow and straight and narrow place. Was it that, Bob, was it holiday time where they used to take you?
+
+[Ukubona LLC] 05:28:50
+I will let my my mother is back and I would walk.
+
+[Johnny] 05:28:56
+Okay, so she would leave… you&#x27;d leave her be married inside?
+
+[Ukubona LLC] 05:28:56
+Because I would…
+
+[S] 05:29:03
+Yamuagana.
+
+[Johnny] 05:29:09
+Yeah, that is what I&#x27;m curious.
+
+[Ukubona LLC] 05:29:12
+Again, the same structure, familiar structure.
+
+[Ukubona LLC] 05:29:18
+There was, uh…
+
+[Ukubona LLC] 05:29:21
+Emma, a woman.
+
+[Ukubona LLC] 05:29:23
+I think he was one of those who really insisted on giving me a name.
+
+[Ukubona LLC] 05:29:32
+Uh, that person…
+
+[S] 05:29:34
+Nanya, Maina.
+
+[Ukubona LLC] 05:29:36
+Gweli.
+
+[S] 05:29:38
+Okay, great.
+
+[Ukubona LLC] 05:29:38
+I don&#x27;t…
+
+[Ukubona LLC] 05:29:42
+But Gweneve was some elder sister.
+
+[Ukubona LLC] 05:29:51
+Okay, and that is, and that is just terrifying. I put it that way.
+
+[Ukubona LLC] 05:29:53
+over Akersa.
+
+[Ukubona LLC] 05:29:55
+And, uh, then…
+
+[Ukubona LLC] 05:30:02
+We&#x27;re going to go tomorrow to a man called the mayor. You can see the contrast.
+
+[Ukubona LLC] 05:30:11
+And then.
+
+[Johnny] 05:30:12
+Interestingly, you&#x27;re recalling Christian names, yeah?
+
+[Ukubona LLC] 05:30:16
+Yeah, that&#x27;s a good point. Hmm.
+
+[Ukubona LLC] 05:30:19
+So…
+
+[Ukubona LLC] 05:30:22
+Where there was the the wave?
+
+[Ukubona LLC] 05:30:24
+Over here in the mirror.
+
+[Ukubona LLC] 05:30:27
+And it is where they all wrote.
+
+[Ukubona LLC] 05:30:33
+The cursor to Derby Mirage.
+
+[Ukubona LLC] 05:30:35
+Not directly, but in a way.
+
+[Ukubona LLC] 05:30:41
+One day, I think she was 13 or 12, came to visit. This one I learned from.
+
+[Ukubona LLC] 05:30:51
+Because of our mother.
+
+[Ukubona LLC] 05:30:59
+Visited Gwere.
+
+[Ukubona LLC] 05:31:00
+Then one day I think they thought it would be fun to take Ikesa and give her her to.
+
+[Ukubona LLC] 05:31:10
+to other men.
+
+[Ukubona LLC] 05:31:13
+to relative Soviet media.
+
+[Ukubona LLC] 05:31:16
+And, uh…
+
+[Ukubona LLC] 05:31:20
+They can visit again and again.
+
+[Ukubona LLC] 05:31:24
+Somehow they disappeared deliberately.
+
+[Ukubona LLC] 05:31:28
+And the poor Akasa didn&#x27;t know what to do.
+
+[Ukubona LLC] 05:31:32
+And, uh…
+
+[Ukubona LLC] 05:31:36
+Uh, Abhimerica had a chance to grab her.
+
+[Johnny] 05:31:43
+And there is, uh…
+
+[Johnny] 05:31:46
+Charles with his UNICEF ethos.
+
+[S] 05:31:47
+doing there at the time? Because I&#x27;m trying to understand.
+
+[Ukubona LLC] 05:31:56
+So these are cousins, Jeremiah and Abimelech. Jeremiah is the man, the husband of Gregory. No, relationally, Abimelech, Jeremiah and Abimelech.
+
+[Johnny] 05:32:07
+Maybe an acquaintance.
+
+[Ukubona LLC] 05:32:08
+Jeremiah is related to Abimelech. Uh-huh. So when they came visiting Abimelech.
+
+[S] 05:32:18
+Jeremiah, hmm.
+
+[Johnny] 05:32:19
+He hooked him up.
+
+[Ukubona LLC] 05:32:21
+Ah, interesting. It found it fun to take this innocent person. She didn&#x27;t love the idea, the slightest idea that she was going to become a victim. Yes. And they simply said goodbye.
+
+[Ukubona LLC] 05:32:37
+And left her there in the house.
+
+[Ukubona LLC] 05:32:40
+Over at the village.
+
+[Ukubona LLC] 05:32:42
+That&#x27;s remarkable.
+
+[Johnny] 05:32:43
+But with… what we know about our paternal grandfather being a very stern and sterile person, would Abimelechi even… did he…
+
+[Johnny] 05:32:53
+Did he ever even spend any time?
+
+[Johnny] 05:32:58
+Even a knight, you may know, at his…
+
+[Johnny] 05:33:00
+in-laws, because I, there is no way I can square what was taking place at Ubukono with personality, uh, Abimelech.
+
+[Ukubona LLC] 05:33:09
+You&#x27;re on the way.
+
+[Ukubona LLC] 05:33:11
+You walk away after greeting them and getting your wokening and.
+
+[Johnny] 05:33:17
+Mm-hmm.
+
+[Ukubona LLC] 05:33:19
+And she was always in a very beautiful white council.
+
+[Ukubona LLC] 05:33:25
+But you may laugh at this one. That comes was borrowed.
+
+[S] 05:33:27
+-H
+
+[Ukubona LLC] 05:33:31
+would be borrowed for the entire village. One who had, who was clean would do. Lend rent. Would lend, lend, lend the cash.
+
+[Ukubona LLC] 05:33:45
+That&#x27;s still happening today at the Kwanzaa Zoo.
+
+[Johnny] 05:33:50
+And yeah, I don&#x27;t know about that.
+
+[S] 05:33:51
+renting an hiring anything
+
+[Ukubona LLC] 05:33:53
+The masutis. They rent the masutis. All the things the Breyers wore.
+
+[Johnny] 05:33:55
+Okay, Busut is yes. I thought Kansas was being rented.
+
+[Ukubona LLC] 05:33:59
+Same territory, same territory. Special because they knew how to take care of their clothing and to wash it and put it so, and the whole village you would know.
+
+[Ukubona LLC] 05:34:14
+We have to find a country to borrow.
+
+[Johnny] 05:34:18
+Italian Gubu.
+
+[Ukubona LLC] 05:34:20
+Interesting.
+
+[Ukubona LLC] 05:34:30
+So I want to mention something Johnny brought up. While you&#x27;re describing Abimelechi Said and Ikesas, I noticed that the Christian names run out after two generations. So you have Abimelechi, obviously Christian, the name, then Malachi, Malachi, Malachi.
+
+[Johnny] 05:34:30
+Okay, that&#x27;d be…
+
+[Ukubona LLC] 05:34:47
+But then beyond Malachi, and there Christianity has vanished.
+
+[Johnny] 05:34:47
+Then they run out.
+
+[S] 05:34:48
+I&#x27;m Jeremiah
+
+[Johnny] 05:34:55
+Understandable. Makes sense.
+
+[Ukubona LLC] 05:34:56
+Understandably, given the timeline that seems consistent, and maybe later we can investigate estimated.
+
+[Ukubona LLC] 05:35:05
+timelines of their ages, the rough estimates, the time at which they lived, those other people. Anyway, I just thought that was interesting that two generations of Christians.
+
+[Johnny] 05:35:15
+That&#x27;s a very important point.
+
+[Ukubona LLC] 05:35:21
+And I don&#x27;t think there&#x27;s any Christian in any generation.
+
+[S] 05:35:26
+You have Jeremiah, Jeremiah creeped in there as well
+
+[Ukubona LLC] 05:35:29
+Jeremiah would be… I&#x27;d be married to his generation.
+
+[Johnny] 05:35:30
+Yeah.
+
+[Ukubona LLC] 05:35:31
+Yes.
+
+[Johnny] 05:35:32
+But there&#x27;s something where Daddy had gained a bit of traction on, and I would like us to maximize.
+
+[Ukubona LLC] 05:35:38
+And Isiko, is the name Isiko is named after?
+
+[Johnny] 05:35:42
+Okay.
+
+[Ukubona LLC] 05:35:45
+Oh, after the husband of the of that woman who grabbed. And is is that the one also? Is that the one also named Mozari? I think, yeah, okay.
+
+[Johnny] 05:35:51
+Baby.
+
+[Johnny] 05:35:56
+Daddy, I&#x27;m going to ask a few pointed questions, and they could probably open up a few things for you. Do you remember your brother, George, being born?
+
+[Ukubona LLC] 05:36:09
+No.
+
+[Johnny] 05:36:10
+You don&#x27;t.
+
+[Johnny] 05:36:12
+Okay, so the, the, the, the earliest, there is something where we were gaining a bit of traction.
+
+[Johnny] 05:36:20
+He was younger than… but you had gained some kind of traction on recalling certain facts about your education, starting Natchi, Nibaptism… was it with baptism classes?
+
+[Ukubona LLC] 05:36:34
+Judge, judge. We&#x27;re going to assume.
+
+[Johnny] 05:36:35
+With church.
+
+[Ukubona LLC] 05:36:36
+Education started being baptized
+
+[Johnny] 05:36:41
+Mmm.
+
+[Ukubona LLC] 05:36:42
+Sure.
+
+[Ukubona LLC] 05:36:45
+Abimelech planned to make sure I get baptized. I could have done that in the church, which was whose land was given by Malachi.
+
+[Ukubona LLC] 05:36:57
+But.
+
+[Ukubona LLC] 05:36:59
+But for my father, my my father had the.
+
+[Ukubona LLC] 05:37:05
+Uh, a step, a step sister.
+
+[Ukubona LLC] 05:37:10
+Mm-hmm. Called, uh, Kerala.
+
+[Ukubona LLC] 05:37:14
+Correct.
+
+[Ukubona LLC] 05:37:15
+Kagala, born by who? Babidya, this name you hear now. This is Babidya.
+
+[Ukubona LLC] 05:37:27
+Was this was the what?
+
+[Ukubona LLC] 05:37:31
+Was the remedy was the.
+
+[Ukubona LLC] 05:37:35
+The mother, actually.
+
+[Ukubona LLC] 05:37:36
+No, I&#x27;m getting confused
+
+[Johnny] 05:37:39
+Yes.
+
+[Ukubona LLC] 05:37:45
+My video, my video, my video, my video, my video.
+
+[Ukubona LLC] 05:37:53
+By video.
+
+[Ukubona LLC] 05:37:55
+was the mother of Rabbi Milic.
+
+[Ukubona LLC] 05:38:00
+And, uh…
+
+[Ukubona LLC] 05:38:03
+What happened?
+
+[Johnny] 05:38:07
+You don&#x27;t need to recall immediately, but it will come back. But it&#x27;s my understanding, Daddy, that after baptism, then you went to Namutumba.
+
+[Ukubona LLC] 05:38:17
+Before you got there.
+
+[Ukubona LLC] 05:38:20
+Let us backtrack a little.
+
+[Ukubona LLC] 05:38:26
+This, uh…
+
+[Ukubona LLC] 05:38:28
+Colorado.
+
+[Ukubona LLC] 05:38:32
+Cause I was, uh…
+
+[Ukubona LLC] 05:38:37
+And that is a that&#x27;s what the that&#x27;s that is the turning point actually.
+
+[Ukubona LLC] 05:38:42
+of our story about Christianity.
+
+[Ukubona LLC] 05:38:46
+God, I was actually born.
+
+[Ukubona LLC] 05:38:51
+In another…
+
+[Ukubona LLC] 05:38:57
+Oh, you got it.
+
+[Ukubona LLC] 05:39:00
+But born by who? By what idiot?
+
+[Ukubona LLC] 05:39:05
+Bobbidi was, I think in her time, she was beautiful.
+
+[Ukubona LLC] 05:39:11
+but not particularly clean.
+
+[Ukubona LLC] 05:39:16
+I&#x27;m smart, no.
+
+[Ukubona LLC] 05:39:19
+What I remember about her.
+
+[Ukubona LLC] 05:39:22
+Sure, but you guys…
+
+[Ukubona LLC] 05:39:26
+Do not bathe.
+
+[Ukubona LLC] 05:39:28
+And you could see in the back.
+
+[Ukubona LLC] 05:39:34
+Yes.
+
+[Ukubona LLC] 05:39:36
+So some of these things you may not be proud of. No, there&#x27;s nothing to hide from. What would you hate?
+
+[Ukubona LLC] 05:39:49
+Cold water.
+
+[Ukubona LLC] 05:39:52
+So she didn&#x27;t breathe the offer. That&#x27;s remarkable. I have issues with cold water.
+
+[Ukubona LLC] 05:40:00
+They already know. Uh-huh. So…
+
+[S] 05:40:03
+I thought the water you bath is extremely high temperature. You just
+
+[Ukubona LLC] 05:40:08
+Yes, because I itch. Extraordinary itching if I have lukewarm. Lukewarm water causes trouble. And that too, I suspect. Lukewarm, so who knows? Sure.
+
+[S] 05:40:10
+The current one is
+
+[Ukubona LLC] 05:40:24
+That was a problem to do with health, hygiene. Bathing was hated.
+
+[Ukubona LLC] 05:40:33
+Uh, even…
+
+[Ukubona LLC] 05:40:37
+Russian clothes. Mm-hmm.
+
+[Johnny] 05:40:39
+Yo.
+
+[Ukubona LLC] 05:40:40
+Real close, really. Mm. Because she, she had the.
+
+[Ukubona LLC] 05:40:46
+I really remember her washing up.
+
+[Ukubona LLC] 05:40:52
+I also, if you remember, Knight.
+
+[Ukubona LLC] 05:40:57
+Our night picked up.
+
+[Ukubona LLC] 05:40:59
+Behavior, yeah, public.
+
+[Ukubona LLC] 05:41:02
+And I have no one that we can cook to give her that meal.
+
+[Ukubona LLC] 05:41:08
+That&#x27;s very porous sound. Very porous sound. Baby, it was porous sound. Ah.
+
+[Johnny] 05:41:16
+I hear you.
+
+[Ukubona LLC] 05:41:18
+Name, name, sir.
+
+[Johnny] 05:41:21
+You&#x27;re dramatizing, Charles, who uses the rate-based approach.
+
+[Ukubona LLC] 05:41:31
+Oh, oh, they were. They would go there for.
+
+[Johnny] 05:41:36
+Mm-hmm.
+
+[Ukubona LLC] 05:41:42
+She walk away. Wow. If I ever come back here to your home, my foot will look where I am coming from. This is a mother to son. Yeah. Wow.
+
+[Ukubona LLC] 05:41:57
+You see how this happens
+
+[Johnny] 05:41:58
+Yeah.
+
+[Ukubona LLC] 05:41:59
+Remember, he said that you have said I would never come back. So eventually you see her coming with her
+
+[Johnny] 05:42:08
+It&#x27;s probably in the back.
+
+[Ukubona LLC] 05:42:10
+And that was
+
+[Johnny] 05:42:11
+So…
+
+[Johnny] 05:42:14
+So that year, you know, we… we… we were initially having some conversations with Charles and…
+
+[Johnny] 05:42:22
+And the… like, how long this initial…
+
+[Johnny] 05:42:26
+Discussion will take and we we know that it&#x27;s going to be a series of many.
+
+[Ukubona LLC] 05:42:31
+There is no, this is not the land. Yeah
+
+[Johnny] 05:42:34
+this is just the first one. We thought that maybe we could go up to 1PM our time, which is about 10AM Charles&#x27; time. That gives us another…
+
+[Johnny] 05:42:46
+bit of 20 minutes, but it has really been a nice.
+
+[S] 05:42:52
+Very useful, very useful, very useful.
+
+[Ukubona LLC] 05:42:54
+Yes
+
+[Johnny] 05:42:54
+a very nice initial brainstorm on this. One of the things, perhaps.
+
+[Johnny] 05:43:01
+we can…
+
+[Johnny] 05:43:03
+Later, I got…
+
+[Johnny] 05:43:05
+What we have in my place of work, we call it pause and reflect.
+
+[Johnny] 05:43:10
+You… you look at maybe how we can…
+
+[Johnny] 05:43:14
+do things, uh… a bit differently, but so far, the way we have done it, it seems to be working well. Daddy organically going to…
+
+[Johnny] 05:43:25
+to places where… I know that the…
+
+[Johnny] 05:43:30
+There&#x27;s this temptation, like, to get a bit academic.
+
+[Johnny] 05:43:35
+Um, where maybe you want to have an organizing framework for things, but um…
+
+[Johnny] 05:43:42
+Maybe going forward, you just keep…
+
+[Johnny] 05:43:47
+doing what you&#x27;re doing. We… we… we were going along a certain line of your education, but perhaps that is something that we can pick up on…
+
+[Ukubona LLC] 05:43:57
+Patches
+
+[S] 05:43:57
+Later, yes. Yeah, we can do that later, yeah. What has been interesting is, for me, you know, the stories in between, you know, those human interests.
+
+[Johnny] 05:43:58
+For my next session.
+
+[Ukubona LLC] 05:44:00
+I think that
+
+[Ukubona LLC] 05:44:09
+Very much, yeah.
+
+[S] 05:44:10
+Stories are really very important. The jokes, the rationale behind certain behaviours.
+
+[S] 05:44:17
+the namings and what have you. Of course, eventually, we have to, obviously, we have to make the connections, because their names would be here only, yeah, connections here, they can recover.
+
+[Ukubona LLC] 05:44:27
+Yeah.
+
+[S] 05:44:28
+Very strong. So we we&#x27;ve not yet connected to those people in terms of our.
+
+[S] 05:44:34
+Tree I anger. I&#x27;m sure that as we go along it will be connected, but what is interesting is the human interest side of it. And I&#x27;m making a reader&#x27;s Okuba interested in the story.
+
+[Ukubona LLC] 05:44:43
+Yeah.
+
+[Johnny] 05:44:43
+Yeah.
+
+[S] 05:44:45
+Uh, yeah, the work of a boring, you know, that human, the humor, the humor, the, the, the, the things which lead to people&#x27;s behaviors is very.
+
+[Johnny] 05:44:53
+Yeah, and there&#x27;s something…
+
+[S] 05:44:55
+Very important, yeah
+
+[Johnny] 05:44:55
+And there&#x27;s something about us who are asking Daddy these questions, because as he tells them.
+
+[Johnny] 05:45:02
+at the back of my mind, I&#x27;m trying to see certain experiences which probably are more formative in the Mosul that we see today.
+
+[Johnny] 05:45:12
+Than than that than others and that as we go on we&#x27;ll be we&#x27;ll be probing those because.
+
+[Johnny] 05:45:20
+We are quite complex beings, the number of…
+
+[Johnny] 05:45:24
+Layers that get peeled along the way.
+
+[Johnny] 05:45:26
+And I know there are different people who had influence on you during those earlier years in different ways and will. But for me, one area that is really interesting that has emerged.
+
+[Johnny] 05:45:37
+from today&#x27;s conversation, is that you say the, uh, Ikesa, which you had spoken about much less, maybe for good reason, to us, giving us a more sanitized view of the perspective.
+
+[Ukubona LLC] 05:45:53
+But for me, you see, it&#x27;s very interesting. The contrasts between the Patano and Matano are striking. They&#x27;re extremely striking.
+
+[Johnny] 05:45:54
+But…
+
+[Johnny] 05:46:04
+And that is the product of both, huh?
+
+[Ukubona LLC] 05:46:06
+And yes, so that is really remarkable. And I think that is one part which should be captured before I forget it. Yeah.
+
+[Ukubona LLC] 05:46:21
+The cursor side —.
+
+[Ukubona LLC] 05:46:28
+One of the things which you may have observed.
+
+[Ukubona LLC] 05:46:31
+Those over here were ordered.
+
+[Ukubona LLC] 05:46:34
+And that is the humor. Humor, yes. And these are people. Yeah.
+
+[Ukubona LLC] 05:46:42
+Now
+
+[Ukubona LLC] 05:46:48
+This group, this other group, Kassar&#x27;s group.
+
+[Ukubona LLC] 05:46:51
+referred to.
+
+[Ukubona LLC] 05:46:53
+Travel militaries group as Abbasomi. Abbasomi. Abbasomi. Abbasomi, like the word of Uganda. And one question which you should do.
+
+[Ukubona LLC] 05:47:03
+Try to connect.
+
+[Ukubona LLC] 05:47:06
+Is that, um…
+
+[Ukubona LLC] 05:47:12
+A sister, not a sister, but a sister.
+
+[Ukubona LLC] 05:47:19
+Mwanawan Country Court, Nachibande.
+
+[Ukubona LLC] 05:47:24
+Much longer.
+
+[Ukubona LLC] 05:47:27
+Was a daughter of Hong Kong.
+
+[Ukubona LLC] 05:47:29
+And somehow.
+
+[Ukubona LLC] 05:47:32
+I don&#x27;t know how they…
+
+[Johnny] 05:47:32
+That&#x27;s interesting.
+
+[Johnny] 05:47:36
+A sister to marriage.
+
+[Ukubona LLC] 05:47:37
+Mm-hmm. Not exactly, but all these people didn&#x27;t make those distinct — Yeah, identities. Mm-hmm.
+
+[Johnny] 05:47:46
+Yeah.
+
+[Ukubona LLC] 05:47:49
+Anyway, time will come.
+
+[Ukubona LLC] 05:47:53
+Cuen Murochi, or I mean Waco.
+
+[Ukubona LLC] 05:47:57
+Waco wanted to get.
+
+[Ukubona LLC] 05:48:00
+A wife.
+
+[Ukubona LLC] 05:48:03
+for his son.
+
+[Ukubona LLC] 05:48:07
+And yet.
+
+[Ukubona LLC] 05:48:11
+the people of Bulamuji.
+
+[Ukubona LLC] 05:48:18
+are so close. In fact, both most of these so-called were Angina.
+
+[Ukubona LLC] 05:48:25
+Actually come from.
+
+[Ukubona LLC] 05:48:30
+More or less the same still and it will be.
+
+[Ukubona LLC] 05:48:36
+wrong for.
+
+[Ukubona LLC] 05:48:40
+to get his son Moroichi, to get him married too.
+
+[Ukubona LLC] 05:48:52
+So they said they decided to go the main doorway. There should be a princess.
+
+[Ukubona LLC] 05:49:03
+And so they decided to look around and find a strikingly beautiful girl.
+
+[Ukubona LLC] 05:49:11
+Coordinate Bandi.
+
+[Ukubona LLC] 05:49:14
+Beautiful large eyes and so on. So they decided to pick this one to be.
+
+[Ukubona LLC] 05:49:25
+Interesting. Uh-huh.
+
+[Ukubona LLC] 05:49:30
+That is how the whole thing came together.
+
+[Ukubona LLC] 05:49:33
+When people are fighting over.
+
+[Ukubona LLC] 05:49:40
+I&#x27;m biased. Yes. And at best I keep quiet. I don&#x27;t join in because.
+
+[Ukubona LLC] 05:49:49
+The the varangida of.
+
+[Ukubona LLC] 05:49:56
+decided to go with Machu Panda. Machu Panda, the beautiful lady.
+
+[Ukubona LLC] 05:50:01
+And so.
+
+[Ukubona LLC] 05:50:04
+This creates that kind of relationship.
+
+[Ukubona LLC] 05:50:11
+And so once they mentioned that Nativale is the book.
+
+[Ukubona LLC] 05:50:15
+The priest today.
+
+[Ukubona LLC] 05:50:18
+Woman.
+
+[Ukubona LLC] 05:50:22
+And then, of course, they mentioned it. I think I don&#x27;t know the details.
+
+[Ukubona LLC] 05:50:28
+But one thing is.
+
+[Ukubona LLC] 05:50:30
+Naturally discovered the ship that she was going to be.
+
+[Ukubona LLC] 05:50:35
+The wife of a prince of Gulamudi.
+
+[Ukubona LLC] 05:50:41
+And, uh…
+
+[Ukubona LLC] 05:50:43
+No.
+
+[Ukubona LLC] 05:50:44
+to be, yeah, to be the prince of Lamuj and the prince.
+
+[Ukubona LLC] 05:50:50
+She came back after she went first of all to the embargo, not embargo, but.
+
+[Ukubona LLC] 05:50:59
+Ambuka. Ambuka is the —.
+
+[Ukubona LLC] 05:51:03
+The court. Yes. The court of the, of the table singer was Wako.
+
+[Ukubona LLC] 05:51:09
+And, uh…
+
+[Ukubona LLC] 05:51:11
+She decided to come back to Okonte.
+
+[Ukubona LLC] 05:51:16
+And I said to now.
+
+[Ukubona LLC] 05:51:18
+Soon I will be having a child.
+
+[Ukubona LLC] 05:51:21
+And I need a helper.
+
+[Ukubona LLC] 05:51:24
+Take care of what?
+
+[Ukubona LLC] 05:51:26
+The child. This royal child.
+
+[Ukubona LLC] 05:51:30
+So he went to Conte, who was then in charge.
+
+[Ukubona LLC] 05:51:41
+And so they picked up the village.
+
+[Ukubona LLC] 05:51:46
+Every minute you was picked to go.
+
+[Ukubona LLC] 05:51:48
+And 20 kilos of garage.
+
+[Ukubona LLC] 05:51:52
+Now you can see that.
+
+[Ukubona LLC] 05:51:54
+I am biased when it comes to.
+
+[Johnny] 05:51:57
+Neo.
+
+[Ukubona LLC] 05:52:00
+Double secession. Because I&#x27;ve been really attacked trying to look at opioids.
+
+[Johnny] 05:52:07
+And that is a very interesting segue, because, Daddy, at our next, uh, chat, I know that is a very interesting segue to our conversation about.
+
+[Johnny] 05:52:21
+how we get this breakthrough in education, because once Abimeleche gets into that court.
+
+[Johnny] 05:52:30
+And sees the educated princes there.
+
+[Johnny] 05:52:36
+He, he, he, he gets a better appreciation of.
+
+[Johnny] 05:52:39
+education, and that&#x27;s a very big point that I think we will be picking up on from our next.
+
+[Johnny] 05:52:47
+Because remember that at the end of the day, this is a biography of you.
+
+[Johnny] 05:52:54
+And we are going to be looking at those common things. Of course we move from side to side getting an idea of our relatives along the way. But the common spine that we are looking at is that is professor is Patrick Mozale&#x27;s journey and we are going to.
+
+[S] 05:53:08
+Oh.
+
+[Johnny] 05:53:13
+For our next conversation, we will be…
+
+[Johnny] 05:53:16
+focusing much more on your journey, where you are from your education, and weaving it with the lives and experiences of other people. But the main central spine is Mozale&#x27;s journey.
+
+[Johnny] 05:53:31
+And how these different actors are coming in and out.
+
+[Johnny] 05:53:35
+But the main story here is Yamazade.
+
+[Johnny] 05:53:40
+that with these different people coming, the Nachibandezo, giving context.
+
+[Johnny] 05:53:46
+But context can&#x27;t be bigger than the story of the person.
+
+[Ukubona LLC] 05:53:49
+No
+
+[Johnny] 05:53:51
+Yep.
+
+[S] 05:53:51
+Yes.
+
+[S] 05:53:53
+Yeah, no, this is really very deep, deep information.
+
+[Ukubona LLC] 05:53:56
+Well, for me, there&#x27;s some interesting things. The idea of your exposure to alcohol very early, which may have been standard, probably. You&#x27;re making it through phone. I understand. At 87, it&#x27;s not — I get many friends of mine.
+
+[Johnny] 05:54:12
+And he&#x27;s excited.
+
+[Ukubona LLC] 05:54:13
+I can&#x27;t get many friends of mine who can describe that dance at your age.
+
+[Ukubona LLC] 05:54:19
+As people don&#x27;t drink alcohol, it&#x27;s a very striking thing to daddy doesn&#x27;t drink alcohol. I mean, well, more nice drink, he&#x27;ll have it, but daddy has not drunk alcohol all his life.
+
+[Ukubona LLC] 05:54:29
+I find…
+
+[Johnny] 05:54:30
+Maybe we thank God for his economic limitations.
+
+[Ukubona LLC] 05:54:33
+For you thanking God, for me, I find it striking. I find it striking.
+
+[Johnny] 05:54:39
+Striking is a neutral statement.
+
+[Ukubona LLC] 05:54:42
+Quite striking. I&#x27;m fascinated, actually, why drunk alcohol.
+
+[Johnny] 05:54:44
+Yeah.
+
+[Johnny] 05:54:48
+Well, Kadi, there are some people who are lucky.
+
+[Ukubona LLC] 05:54:49
+That&#x27;s very good. Oh, God, let&#x27;s just hold it.
+
+[Johnny] 05:54:54
+There are some people who are lucky.
+
+[S] 05:54:54
+There are no I I I wanted I wanted to show this item cooler.
+
+[Ukubona LLC] 05:54:58
+Yes, that&#x27;s what you want.
+
+[Johnny] 05:54:59
+No.
+
+[Johnny] 05:55:00
+Charlie, what?
+
+[S] 05:55:03
+I have some attachments to some cultural items which I grew up seeing.
+
+[Ukubona LLC] 05:55:06
+Yes.
+
+[S] 05:55:14
+It was a reward
+
+[Ukubona LLC] 05:55:15
+Good, yes. Of course, no doubt.
+
+[Johnny] 05:55:18
+Good.
+
+[Ukubona LLC] 05:55:18
+compared with, with articles that are made out of boats.
+
+[Ukubona LLC] 05:55:23
+Great.
+
+[Ukubona LLC] 05:55:25
+They went by sight.
+
+[Ukubona LLC] 05:55:28
+This one from Mwenge. Ah, Amwenge. And the other one, Marwa. Ah!
+
+[Ukubona LLC] 05:55:35
+So mwenge is from banana, and the other one is millet. Mm-hmm.
+
+[Ukubona LLC] 05:55:38
+Hmm. Okay.
+
+[Ukubona LLC] 05:55:40
+Interesting.
+
+[S] 05:55:46
+It&#x27;s actually, it&#x27;s actually pipe, it&#x27;s actually smoking.
+
+[Ukubona LLC] 05:55:49
+That&#x27;s Kaguna. Kaguna. Kaguna. The mother. The mother of the cursor. The doctor priest.
+
+[Johnny] 05:55:56
+What you&#x27;re holding, Charles, is Kaguna&#x27;s artifacts, her toolkit.
+
+[Johnny] 05:56:12
+That is Kaguna&#x27;s toolkit.
+
+[Ukubona LLC] 05:56:17
+Uh, Montana?
+
+[Ukubona LLC] 05:56:20
+That has which you put fire and the.
+
+[Ukubona LLC] 05:56:29
+You put this thing you… The pipe, the straw.
+
+[Johnny] 05:56:33
+It&#x27;s got shisha!
+
+[S] 05:56:35
+This is a cheetah, really. Yeah.
+
+[Ukubona LLC] 05:56:36
+-Hu
+
+[Ukubona LLC] 05:56:41
+It&#x27;s so sir
+
+[Ukubona LLC] 05:56:48
+You, you, you blow or you, you suck and you blow out. What&#x27;s the blowing for? Why?
+
+[S] 05:56:56
+That&#x27;s a marijuana, my dear, it&#x27;s real marijuana on that thing, eh? So when, when, when, when, when that, I guess I would get intoxicated, we would be terrorized, I&#x27;m telling you, the noise, uh.
+
+[Ukubona LLC] 05:56:59
+Oh. Oh, this is…
+
+[Ukubona LLC] 05:57:08
+Bridgewater&#x27;s like a goose.
+
+[S] 05:57:08
+It was a very serious issue for our childhood.
+
+[Ukubona LLC] 05:57:10
+I mean, marriage was against it fairly. I mean, marriage was against it. So.
+
+[S] 05:57:14
+Yeah.
+
+[S] 05:57:15
+These two are contrasting.
+
+[Ukubona LLC] 05:57:17
+They make sure that he&#x27;s not around. Hey. I thought this was alcohol. This is actual alcohol.
+
+[S] 05:57:26
+There is shisha, the real shisha, and even the shape of the… the shape of the thing is the current shisha bottle, you know, the glass bottle?
+
+[Ukubona LLC] 05:57:31
+The current shisha? Yes, yes, yes.
+
+[S] 05:57:33
+That&#x27;s how Mugwabe looks like, actually, with the pipe going inside it, and we attack with yander.
+
+[Ukubona LLC] 05:57:35
+That&#x27;s amazing.
+
+[Ukubona LLC] 05:57:37
+Yeah.
+
+[Ukubona LLC] 05:57:40
+Yeah. Mm-hmm.
+
+[S] 05:57:41
+On that marijuana, marijuana growing around the house. And that was part of the house. It is around the whole homestead.
+
+[Ukubona LLC] 05:57:46
+Yes, yes, yes.
+
+[Ukubona LLC] 05:57:51
+Because of my marriage, they will not grow it there. Oh, they&#x27;ll grow it elsewhere? They will still .
+
+[Ukubona LLC] 05:58:00
+And…
+
+[S] 05:58:07
+I&#x27;m telling you.
+
+[Johnny] 05:58:09
+I&#x27;ve asked some
+
+[Ukubona LLC] 05:58:11
+About so much, eh? About so much!
+
+[Johnny] 05:58:13
+They will not let us see.
+
+[Ukubona LLC] 05:58:19
+I think that explains some of the problems we have had in our childhood. Yeah, yeah. Because.
+
+[Johnny] 05:58:21
+-H
+
+[Ukubona LLC] 05:58:23
+The mother and the father. We&#x27;re completely different. Different world. So, Daddy, you&#x27;re calling it a problem, but at least me, I&#x27;ve been having some discussions with Johnny. We&#x27;ve been analyzing you, and we feel like you have some ability.
+
+[Johnny] 05:58:24
+Of course
+
+[Ukubona LLC] 05:58:38
+to compartmentalize things in your brain, and you just separate them.
+
+[Ukubona LLC] 05:58:43
+And that has served you well.
+
+[Ukubona LLC] 05:58:48
+Hey, you have dealt with…
+
+[Johnny] 05:58:49
+Oh, well
+
+[Johnny] 05:58:50
+On the surface.
+
+[Ukubona LLC] 05:58:50
+Well.
+
+[Ukubona LLC] 05:58:54
+Oh, well, yeah, same thing. How many questions do you should do?
+
+[Ukubona LLC] 05:58:56
+In your mind, because it&#x27;s the turning, it&#x27;s at the turning point of my life. Mm-hmm. No, you&#x27;re Babidi. Babidi. The mother. Yes, yes, I&#x27;ve noted Babidi. And he had her daughter.
+
+[Ukubona LLC] 05:59:11
+She came, the daughter she came with. Yeah, uh-huh. Yes. Kawala. Kawala.
+
+[Ukubona LLC] 05:59:18
+Sure, come on, huh?
+
+[Ukubona LLC] 05:59:23
+Go to Marriott.
+
+[Ukubona LLC] 05:59:26
+Mmhm.
+
+[Ukubona LLC] 05:59:28
+But before…
+
+[Ukubona LLC] 05:59:31
+I was taken to Kuala Lumpur. Yes.
+
+[Ukubona LLC] 05:59:39
+resembles Abimelech.
+
+[Ukubona LLC] 05:59:42
+Almost like they were almost identical, even different families. Yes. And so Kawara decided.
+
+[Ukubona LLC] 05:59:52
+To ask us a brother. Mhm.
+
+[Ukubona LLC] 05:59:56
+Give me, I want, because she was, I don&#x27;t know whether she was Bannon or what.
+
+[Ukubona LLC] 06:00:02
+They said that you give me this child. Ah.
+
+[Ukubona LLC] 06:00:07
+I said, but this child is learning how to become a Christian. Said, oh, we have churches at our place. He&#x27;ll get baptized there. And so the minister says, OK, we have got the Bible here.
+
+[Ukubona LLC] 06:00:24
+This is the Bible she has been studying.
+
+[Ukubona LLC] 06:00:28
+Can you kind of dismember with you and the boy?
+
+[Ukubona LLC] 06:00:31
+Wow. Playwrights took it.
+
+[Ukubona LLC] 06:00:36
+Kawarakubui. Mm-hmm.
+
+[Ukubona LLC] 06:00:40
+And from time to time, I&#x27;ll be saying Muasint was the Muslim name.
+
+[Johnny] 06:00:48
+So that&#x27;d be…
+
+[Johnny] 06:00:51
+You see what&#x27;s interesting here, and we have to let these things happen organically. We asked a question about your early years and your recollection of experiences.
+
+[Johnny] 06:01:05
+Your, your response to that is that you needed to first conceptualize it, but, but here you are telling us experience, which we knew very well, the, which you have.
+
+[S] 06:01:10
+Organize, organize.
+
+[Johnny] 06:01:17
+from the age of 5 or so, you&#x27;re recording some really powerful things. So, at least for me, my takeaway is that for you, rather than using very.
+
+[Ukubona LLC] 06:01:31
+Framework.
+
+[Johnny] 06:01:31
+you know, yeah, uh, every gamble which takes you to a certain place, uh, I think we can use broad…
+
+[Johnny] 06:01:41
+uh, brush strokes, but there&#x27;s something about what I would like.
+
+[S] 06:01:42
+Discussions, yeah.
+
+[Johnny] 06:01:46
+us to deal and, and daddy attested to that when you started speaking this life cycle approach for our next session, us asking some more very specific questions about you.
+
+[Johnny] 06:02:02
+Because what we want to do at the end of the day is sense-making of the person who we see, and how those experiences, those formative experiences, made that person. Because the person who is interested in this thing.
+
+[Johnny] 06:02:17
+Are you fascinated about the story of Patrick Mouzari?
+
+[Johnny] 06:02:22
+And we will… we&#x27;ll… we&#x27;ll get there.
+
+[Ukubona LLC] 06:02:25
+So so I I one thing that&#x27;s for sure.
+
+[Ukubona LLC] 06:02:29
+is that if we treat time as a resource.
+
+[Ukubona LLC] 06:02:34
+That we can afford.
+
+[Ukubona LLC] 06:02:36
+then we&#x27;re in good business, because all we… if we, say, have Saturdays off, or whichever Saturday is every other Saturday, and can dedicate 4 hours, yeah?
+
+[Ukubona LLC] 06:02:48
+And stuff like this. And live dirty, unconstrained. Just when he runs out is where Charles can go to his list checklist. And you check the next topic.
+
+[S] 06:02:58
+Yeah, yeah, exactly, exactly.
+
+[Johnny] 06:02:59
+Yeah.
+
+[Ukubona LLC] 06:03:01
+I ended up with a real, real .
+
+[S] 06:03:02
+That&#x27;s okay.
+
+[S] 06:03:02
+Yeah, I think that&#x27;s — go ahead, go ahead, Jenny.
+
+[Johnny] 06:03:03
+But I&#x27;m… I&#x27;m not…
+
+[Johnny] 06:03:06
+I&#x27;m not entirely…
+
+[Johnny] 06:03:08
+Because I can see right now we are approaching some kind of satiety where we have a break, let&#x27;s be realistic. We can&#x27;t have 4 hours.
+
+[Ukubona LLC] 06:03:18
+No, you misunderstood me, Jay. What I&#x27;m saying is time is the resource.
+
+[Ukubona LLC] 06:03:24
+So, we are able to do this because we sort of had… gave off 4 hours. We&#x27;ve given off 4 hours today, yeah?
+
+[Ukubona LLC] 06:03:32
+And if we could — yeah, it&#x27;s four — OK, three hours, two hours.
+
+[Johnny] 06:03:32
+4 hours?
+
+[S] 06:03:36
+Mm-hmm.
+
+[Johnny] 06:03:38
+Because it&#x27;s 2 hours that we&#x27;re looking at.
+
+[Ukubona LLC] 06:03:39
+So if we continue doing this every week or every other week.
+
+[Ukubona LLC] 06:03:45
+It&#x27;s unbelievable, yes, because there&#x27;s so many things we&#x27;ve covered that we were not in any framework any of us had.
+
+[S] 06:03:45
+Every weekend may be less sweet.
+
+[S] 06:03:48
+Okay.
+
+[S] 06:03:54
+Hmm.
+
+[Ukubona LLC] 06:03:54
+And actually, we&#x27;ve even interrupted Daddy so many times today, because we&#x27;re trying to force…
+
+[Johnny] 06:04:02
+No, actually not. There is one thing that will always take place. They are clarifying questions and it also helped with that. But Cadi, the one big broad stroke that Charles started this thing is that we are dealing with the early years.
+
+[Ukubona LLC] 06:04:06
+Yeah.
+
+[Johnny] 06:04:17
+And there is so much in there. We, the conversation has not gone to Public Service Commission or Berkeley. We just got one big chunk of a certain time period and said earlier, and daddy has woven in and out of that with different stories there.
+
+[Ukubona LLC] 06:04:19
+Yeah, yeah.
+
+[Ukubona LLC] 06:04:31
+Yeah.
+
+[Johnny] 06:04:32
+But within that broad framework, that big, broad framework of the ideas, and I think taking those chunks, they will reach a certain point where I think we will now start repeating ourselves and stories. Then we&#x27;ll know that perhaps, yeah.
+
+[Johnny] 06:04:48
+This is now time move.
+
+[Ukubona LLC] 06:04:49
+Oh, I…
+
+[Ukubona LLC] 06:04:50
+And we&#x27;ll see what the transcript looks like from today. Because what will emerge from that are very clear gaps, which we can address. There&#x27;s some very clear gaps we can now point to. We&#x27;re like, oh, can we pursue this line more?
+
+[Johnny] 06:04:55
+Yeah.
+
+[Johnny] 06:04:59
+Yeah.
+
+[Ukubona LLC] 06:05:05
+That line more.
+
+[Johnny] 06:05:06
+Exactly. And we are counting on you to help.
+
+[S] 06:05:08
+Yeah, I think so, I think so.
+
+[Ukubona LLC] 06:05:10
+Yeah, I&#x27;ll share the transcript, because I&#x27;ve been watching the…
+
+[S] 06:05:11
+Yes, yes, yes. Do your magic.
+
+[S] 06:05:14
+Do your AI might be.
+
+[Ukubona LLC] 06:05:15
+I&#x27;ve been watching the transcript. Yes, it&#x27;s around 80% accurate. The times where we change to Lusoga it gets a little lost, but it looks pretty decent so far.
+
+[Johnny] 06:05:28
+Okay, okay
+
+[Ukubona LLC] 06:05:30
+So, anyway…
+
+[S] 06:05:30
+Okay, Pedan, I have one question, one name which keeps on coming back in the past, it&#x27;s called Timurunsh.
+
+[S] 06:05:36
+I just wanted, really, that person Ali resent or Ali pass there. Just a quick one before we close.
+
+[S] 06:05:46
+Nani Timurunji.
+
+[Ukubona LLC] 06:05:48
+Theorem is the grandmother of abomination.
+
+[S] 06:05:52
+Huh?
+
+[Ukubona LLC] 06:05:52
+Hey!
+
+[Ukubona LLC] 06:05:53
+Grandmother. Patano or Matano? Patano. Patano grandmother.
+
+[S] 06:06:01
+Okay, that&#x27;s where it comes from, okay.
+
+[Ukubona LLC] 06:06:03
+There you are.
+
+[S] 06:06:05
+Well, it had been added all the time, and I was not getting… it was not coming out.
+
+[Johnny] 06:06:10
+But, Charles, do you know what I find also very interesting? Is that how Mami got the name Timurud?
+
+[S] 06:06:18
+Yeah, that seems…
+
+[Ukubona LLC] 06:06:18
+There&#x27;s no connection. There&#x27;s no connection. No connection.
+
+[Johnny] 06:06:21
+I know! I&#x27;m just saying the coincidence that, uh, these…
+
+[Ukubona LLC] 06:06:24
+Yeah. Oh, yes, yes.
+
+[Johnny] 06:06:27
+You know?
+
+[Johnny] 06:06:28
+Uh, this clearly is not a name that has anything to do with clans or anything like that.
+
+[S] 06:06:37
+Okay, okay. Anyway…
+
+[Ukubona LLC] 06:06:38
+So this transcript that we get has very many incomplete stories. So like this, the Babali, the Muslim, because we&#x27;re talking about church, and yet you&#x27;re going to a Muslim. It&#x27;s very interesting. Yeah, so we will be able to continue from that based on this transcript.
+
+[S] 06:06:52
+Yeah.
+
+[Ukubona LLC] 06:06:59
+If we capture this raw material, next time when you come to Charles&#x27;s checklist, we&#x27;ll include some further. You can see that collection. Yes, yes.
+
+[S] 06:07:10
+Oh, oh.
+
+[Ukubona LLC] 06:07:13
+This is Abimelechi. Abimelechi. It&#x27;s a Muslim. It&#x27;s a Muslim. Yes. But that part of Abimelechi, I would not like you to miss. Yeah. Abimelechi is resisting that this Christian has got to get baptized. Yes.
+
+[Ukubona LLC] 06:07:29
+And they get this a Bible. Mhm. And uh.
+
+[Ukubona LLC] 06:07:35
+And Maasit, that&#x27;s the sister of Maasit.
+
+[Ukubona LLC] 06:07:41
+Over a good minute. So it&#x27;s no, I don&#x27;t worry, I&#x27;ll take care of.
+
+[Ukubona LLC] 06:07:45
+The baptism process. Hmm.
+
+[Ukubona LLC] 06:07:48
+Give me that Bible.
+
+[Ukubona LLC] 06:07:50
+So he gets hold, she gets hold of the Bible and ties it in a.
+
+[Ukubona LLC] 06:07:56
+kind of parcel, flame bomb parcel. Yes, yes.
+
+[Ukubona LLC] 06:08:04
+Yeah, yeah, sure. Mm-hmm.
+
+[S] 06:08:06
+Mm, mm.
+
+[Ukubona LLC] 06:08:09
+Seems until I was old enough to do what? Read. To go to that church.
+
+[Ukubona LLC] 06:08:16
+And that church is real.
+
+[Ukubona LLC] 06:08:18
+It&#x27;s not a dream move if you guys can get money to take me there.
+
+[Ukubona LLC] 06:08:25
+But that&#x27;s where I was baptized.
+
+[Ukubona LLC] 06:08:26
+And I remove it. You have the name?
+
+[S] 06:08:30
+Can you say it work for you?
+
+[Ukubona LLC] 06:08:32
+Makut.
+
+[S] 06:08:33
+Makoto.
+
+[S] 06:08:34
+Okay. Where is Makut?
+
+[Ukubona LLC] 06:08:39
+Somewhere he gets to, if he would even possess that.
+
+[Ukubona LLC] 06:08:46
+You&#x27;ve got a barcode, you&#x27;ve got regular.
+
+[Ukubona LLC] 06:08:49
+Long where this man was buried.
+
+[Ukubona LLC] 06:08:53
+Oh.
+
+[S] 06:08:55
+Okay.
+
+[Ukubona LLC] 06:08:55
+Oh, yeah. I am more.
+
+[S] 06:08:57
+Okay, we can… we can do Google Maps and get to that one.
+
+[Ukubona LLC] 06:08:59
+So it says it&#x27;s very tied to Bugweri. Bugweri County. Bugweri County.
+
+[Ukubona LLC] 06:09:05
+So anyway, that portion, I&#x27;m mentioning it before I forget it.
+
+[Ukubona LLC] 06:09:11
+the question how I cross over to education
+
+[Ukubona LLC] 06:09:17
+Yes, yes. This woman called .
+
+[Ukubona LLC] 06:09:29
+When I say it to you.
+
+[Ukubona LLC] 06:09:31
+It&#x27;s the sister
+
+[Ukubona LLC] 06:09:36
+Of who? Happy marriage. Happy marriage. He&#x27;s the one who&#x27;s taking me away.
+
+[Ukubona LLC] 06:09:40
+from home. To a Muslim setting. To a Muslim setting. And I remember.
+
+[Ukubona LLC] 06:09:51
+Getting hold of that greeting. Yes, yes, in the evening.
+
+[Ukubona LLC] 06:10:03
+Oh, yes. Mm-hmm.
+
+[Johnny] 06:10:04
+Really?
+
+[Johnny] 06:10:06
+Interesting.
+
+[Johnny] 06:10:07
+Yours is really…
+
+[Johnny] 06:10:11
+It has layers.
+
+[Ukubona LLC] 06:10:13
+Yes, because after that, in primary school, he&#x27;ll be in a Catholic setting, doing Kiri, Leso, and Mass.
+
+[Johnny] 06:10:20
+Going for baptism classes.
+
+[Johnny] 06:10:24
+I, I, I think Abhimeric gets to yank him back on course.
+
+[Ukubona LLC] 06:10:30
+But anyway
+
+[S] 06:10:30
+HR council, HR council should be very interesting. I want to get rid of councils other than for traditional things.
+
+[S] 06:10:41
+What struck me and the other one?
+
+[Johnny] 06:10:44
+Exactly. Yep.
+
+[S] 06:10:47
+Eh, toba tolamo kanzu. You know, kanzu, ehi conveniente wa, eh, tiwa itaga kwam kuba nianda paan ti mundamela. M.
+
+[Johnny] 06:10:48
+You can&#x27;t.
+
+[Johnny] 06:10:56
+Yeah.
+
+[Ukubona LLC] 06:10:57
+Just
+
+[Ukubona LLC] 06:11:00
+Now, to see why Dad is pointing at me, I&#x27;ve been wearing cursors for the past week.
+
+[S] 06:11:04
+Oh, really?
+
+[Johnny] 06:11:06
+Well…
+
+[Ukubona LLC] 06:11:07
+Yeah.
+
+[Johnny] 06:11:08
+Yeah, but within his room.
+
+[S] 06:11:09
+You may not you may not realize some genetic genetic continuations.
+
+[Ukubona LLC] 06:11:16
+Yeah, yeah.
+
+[S] 06:11:19
+Ah, interesting.
+
+[Johnny] 06:11:19
+If you wear those councils, Kadi, you had better… you had better go to heaven. Really?
+
+[Ukubona LLC] 06:11:21
+Yeah.
+
+[Ukubona LLC] 06:11:34
+And that&#x27;s where I got baptized in 1948.
+
+[Ukubona LLC] 06:11:40
+1948.
+
+[Ukubona LLC] 06:11:42
+Upon the 22nd
+
+[Ukubona LLC] 06:11:44
+over December. Oh, after Christmas.
+
+[Johnny] 06:11:46
+Oh!
+
+[Ukubona LLC] 06:11:49
+That&#x27;s a traditional
+
+[Ukubona LLC] 06:11:51
+A traditional. So December 26, 1948. We can find it in the calendar. Oh.
+
+[Johnny] 06:11:52
+Deep.
+
+[Ukubona LLC] 06:11:57
+Many children or people get baptized in December after Christmas.
+
+[Ukubona LLC] 06:12:03
+It is 2016. You know, Lisa, I don&#x27;t remember what date she got baptized.
+
+[Johnny] 06:12:08
+Well
+
+[Ukubona LLC] 06:12:10
+Doesn&#x27;t this slightly before then? 26 today.
+
+[Johnny] 06:12:13
+Yeah, but it&#x27;s not a typical day in our calendar, no.
+
+[Ukubona LLC] 06:12:17
+And remember, they remember that&#x27;s when the children
+
+[Ukubona LLC] 06:12:21
+We are murdered by.
+
+[Ukubona LLC] 06:12:24
+Oh, the Kamaka. Oh, Harold. Oh.
+
+[Ukubona LLC] 06:12:29
+Oh, okay, okay. Christian church remember 26th December
+
+[Ukubona LLC] 06:12:38
+Aha.
+
+[Ukubona LLC] 06:12:39
+And so the lecture that people are baptized during that day
+
+[Ukubona LLC] 06:12:43
+Interesting. That&#x27;s a very
+
+[Ukubona LLC] 06:12:49
+December 1948. Jay, there is the beginning of your education narrative. You&#x27;re trying to .
+
+[Johnny] 06:12:59
+Yeah, because, uh…
+
+[S] 06:13:00
+Yeah, yes, it&#x27;s…
+
+[Ukubona LLC] 06:13:00
+Yep.
+
+[Ukubona LLC] 06:13:01
+Yeah, you have an anchor. You have an anchor there.
+
+[Johnny] 06:13:05
+beer.
+
+[Ukubona LLC] 06:13:06
+December 26, th 1948. What&#x27;s the spelling? Boo, BU. The the place of Bugue. Bugue, BU. No, no, the place.
+
+[Ukubona LLC] 06:13:18
+The name of the place.
+
+[Ukubona LLC] 06:13:20
+Oh, no, I got weird.
+
+[Johnny] 06:13:20
+Ina Mugwede.
+
+[Ukubona LLC] 06:13:21
+Yes.
+
+[Ukubona LLC] 06:13:28
+My memory
+
+[Ukubona LLC] 06:13:30
+gets provocative Europe
+
+[S] 06:13:31
+You mentioned it, you mentioned the place.
+
+[Johnny] 06:13:31
+No problem.
+
+[Ukubona LLC] 06:13:33
+The transcription didn&#x27;t work out, so I had to spare it.
+
+[Ukubona LLC] 06:13:37
+Anyway, we&#x27;ll get to Suidaju for now. Cool.
+
+[Johnny] 06:13:39
+Yeah, we&#x27;ll get it.
+
+[Ukubona LLC] 06:13:41
+Okay.
+
+[Johnny] 06:13:41
+But anyway…
+
+[Johnny] 06:13:43
+We are coming up to the two hour mark.
+
+[Ukubona LLC] 06:13:46
+Yeah.
+
+[S] 06:13:46
+Yeah, yeah.
+
+[Johnny] 06:13:48
+And I… just to reiterate, I think this has been a very…
+
+[Ukubona LLC] 06:13:52
+This is it.
+
+[Johnny] 06:13:53
+More… better than expected first start, given that we hadn&#x27;t cleared it.
+
+[Ukubona LLC] 06:13:58
+It&#x27;s called Makutu. Makutu, M-A-K-U.
+
+[S] 06:13:59
+My fault. Yeah, that&#x27;s it. M-E-A-K-U.
+
+[Ukubona LLC] 06:14:04
+UTU. Okay.
+
+[S] 06:14:05
+See you, yeah.
+
+[Ukubona LLC] 06:14:07
+Through you, through you, yeah.
+
+[Johnny] 06:14:08
+Bakut, yeah.
+
+[Ukubona LLC] 06:14:12
+Makutu. M-A-K-U-U-T-U. M-A-K-U-U-T-U.
+
+[Johnny] 06:14:14
+It&#x27;s W, Makutu.
+
+[Johnny] 06:14:15
+Okay.
+
+[Johnny] 06:14:18
+So we can… Charlie, if it works for you, we can… my next Saturday, also, the same time.
+
+[S] 06:14:18
+Hmm.
+
+[S] 06:14:28
+Yeah, it&#x27;s okay with me too.
+
+[Johnny] 06:14:28
+Seems to work.
+
+[Johnny] 06:14:29
+I think we can meet a little earlier, because the daddy&#x27;s had a bit of a complication.
+
+[Ukubona LLC] 06:14:29
+Yeah, that sounds like…
+
+[S] 06:14:30
+Okay
+
+[Johnny] 06:14:36
+With the help.
+
+[Johnny] 06:14:37
+But we can probably have breakfast earlier, uh…
+
+[Ukubona LLC] 06:14:38
+Here.
+
+[Ukubona LLC] 06:14:43
+Let me tell you next time.
+
+[Johnny] 06:14:43
+Next Saturday.
+
+[S] 06:14:43
+Mm-hmm.
+
+[S] 06:14:44
+Okay.
+
+[Johnny] 06:14:45
+Such that we can wrap up by 12 noon.
+
+[Ukubona LLC] 06:14:45
+And this is the trial. So we learn from what we&#x27;ve learned today and plot for next Saturday.
+
+[S] 06:14:54
+Yeah, absolutely.
+
+[Ukubona LLC] 06:14:56
+Yeah, I want to.
+
+[S] 06:14:57
+Absolutely.
+
+[Ukubona LLC] 06:14:59
+I thank you so much because.
+
+[Ukubona LLC] 06:15:02
+This technology has made a difference.
+
+[Johnny] 06:15:05
+Mm-hmm.
+
+[Ukubona LLC] 06:15:08
+When I first came to interact.
+
+[Ukubona LLC] 06:15:11
+with this thing online
+
+[Ukubona LLC] 06:15:13
+I love that myself
+
+[Ukubona LLC] 06:15:15
+I was at a meeting similar to this one.
+
+[Ukubona LLC] 06:15:20
+And there was a person who impressed me. Yeah. A contributor to the meeting.
+
+[Ukubona LLC] 06:15:27
+I can&#x27;t do — I should back up.
+
+[Ukubona LLC] 06:15:30
+I will see that person as soon as I get out of here.
+
+[Ukubona LLC] 06:15:34
+Mm-hmm. So.
+
+[Ukubona LLC] 06:15:38
+The thing ends. The meeting ends. I want this man not there. That&#x27;s the virtual — that&#x27;s the virtual life.
+
+[Johnny] 06:15:48
+You look around.
+
+[Johnny] 06:15:52
+You&#x27;re studying.
+
+[Ukubona LLC] 06:15:56
+That&#x27;s amazing. Yes
+
+[Johnny] 06:15:58
+No.
+
+[S] 06:15:59
+Yeah.
+
+[Ukubona LLC] 06:16:01
+It&#x27;s modern technology. Yes, yes. Even up to now, I&#x27;ve been confused. It&#x27;s just a telephone call. It is like, what&#x27;s up? It&#x27;s just — I&#x27;m good.
+
+[Ukubona LLC] 06:16:13
+I was confused. I didn&#x27;t know that it was going to be as easy as it is now.
+
+[S] 06:16:23
+You thought you would go and do research a bit and read all the books in the reading room.
+
+[Ukubona LLC] 06:16:26
+So that&#x27;s the beauty. The beauty is Johnny and Charles Vallejo, but Johnny&#x27;s actually across Wano, Charles is in West Africa. You can&#x27;t tell the difference.
+
+[Ukubona LLC] 06:16:40
+Because.
+
+[Johnny] 06:16:41
+Teddy, you put us… he can see the three… he can see the three screens, yeah?
+
+[S] 06:16:41
+Yeah.
+
+[Ukubona LLC] 06:16:44
+Yeah, you can see the three screens, but the point is there&#x27;s no difference in quality. There&#x27;s no lag.
+
+[Johnny] 06:16:47
+Okay.
+
+[Johnny] 06:16:49
+Yeah, yeah, yeah.
+
+[Ukubona LLC] 06:16:50
+Because this is the speed of…
+
+[S] 06:16:52
+Yeah, it&#x27;s exact.
+
+[Ukubona LLC] 06:16:54
+Listen, there&#x27;s information moving at the speed of light.
+
+[Ukubona LLC] 06:16:57
+That is, we&#x27;ll round that out. Johnny Akoye. Johnny didn&#x27;t have breakfast. Did you have breakfast?
+
+[Ukubona LLC] 06:17:04
+I don&#x27;t think you did have as good breakfast as you did.
+
+[S] 06:17:08
+Fortunately, fortunately, fortunately, fortunately, Johnny Tallinger, Johnny Tallinger, P.P. Avaya Switch is gone for a long time now, but even me have the entire breakfast, but I&#x27;m not sorry.
+
+[Ukubona LLC] 06:17:15
+Ah, PC would be out!
+
+[Ukubona LLC] 06:17:19
+Oh, you haven&#x27;t — that&#x27;s a very solid epidemiology. OK, Khaled, let me stop this transcript now.
+
+[Johnny] 06:17:22
+Yeah.
+
+[S] 06:17:23
+Yeah, yeah, it&#x27;s okay. It&#x27;s okay, tell me.
+
+[S] 06:17:26
+We&#x27;ll talk again. Carter, take care. Thanks. Bye
+
+[Ukubona LLC] 06:17:29
+Yeah.
+
+</pre>
+  </details>
+</section>
+
+<section class="layer" id="s1-i">
+  <details open>
+    <summary><span class="ttl">I&#8242;: chat log</span><span class="fn">oral-history.md</span></summary>
+    <p class="note">The conversation with Claude, exactly as saved in oral-history.md, including the correction appended after the first summary.</p>
+    <dl class="facts">
+      <dt>Bytes</dt><dd>10,503</dd>
+      <dt>Characters</dt><dd>10,465</dd>
+      <dt>Lines</dt><dd>156</dd>
+      <dt>SHA-256</dt><dd class="hash" data-expect="16bcbea3278ff6b0d84ae39422cbbe7a6a58b023135207988972ca6eb1b9d685">16bcbea3278ff6b0d84ae39422cbbe7a6a58b023135207988972ca6eb1b9d685</dd>
+      <dt>Check</dt><dd class="verify" data-target="s1-i-text">not run</dd>
+    </dl>
+    <pre id="s1-i-text" class="i">How&#x27;d you summarize this?
+
+`Ukubona LLC&#x27;s Personal Meeting Room transcript_2026-09-19_06.17.26.txt`
+
+---
+
+This is the first trial session of a family oral-history project: a ~2-hour recorded conversation in which Daddy (about 87) is interviewed by Johnny and Charles, with the aim of eventually writing his biography. The transcript is only ~80% accurate by your own estimate, and names and places are often garbled, so treat spellings as provisional.
+
+**Purpose and approach**
+Daddy opened by explaining why it matters: he never asked his own father about the history of the Baise Gaga clan and regretted it after he died. He wants his children to ask now, so they don&#x27;t later say &quot;we wish we&#x27;d asked Dad.&quot; They agreed to let him talk freely, without a rigid chronology, with Charles keeping a checklist to pick the next topic when he runs dry. Johnny stressed that Daddy&#x27;s own journey is the spine of the story and relatives are context.
+
+**Paternal (Patano) side**
+- The family belongs to a ruling clan, with the title system imported from Buganda via Kakunguru.
+- Johnny and Daddy traced four generations up: the kids → Daddy → Abimerechi → Malachi → Nkonte.
+- Malachi, born around 1911, gave land to the church, which is why the family was known as pro-church.
+- Christian names stop after about two generations, which Johnny flagged as worth dating later.
+- Other stories: chiefs naming sons after territories, a cruel ruler who demolished houses, and colonial forced labour (*ugwara*).
+
+**Maternal (Matano) side**
+- Babito, from Bunyoro. Names here are nicknames based on behaviour, often jokes, such as William Pimba.
+- This side is looser and more humorous and can&#x27;t be told linearly. Johnny noted Daddy&#x27;s mood changes when he describes it.
+- His grandmother Kaguna was a priestess and diviner with a shrine, and her toolkit (pipe, shakers) was shown in the room.
+- Homemade alcohol (marwa, mwenge) and cannabis grown around the homestead came up.
+- Daddy has never drunk alcohol, which the others found striking.
+
+**Early life threads**
+- He was named by a forceful aunt at birth, plus the cock-on-the-roof naming ritual.
+- The story of how his mother came to be married to Abimerechi.
+- His baptism fight: he was taken into a Muslim household, and the Bible was wrapped up until he was old enough to read. He was baptized on 26 December 1948 at a church at Makutu, in Bugweri County, and later attended a Catholic primary school.
+- The education thread, set up for next time: Igema, the first educated relative, and Abimerechi seeing educated princes at a royal court.
+
+**Logistics and open gaps**
+- Next session: next Saturday, starting earlier, wrapping by noon.
+- Gaps to chase: his earliest memory (unanswered), the fathers of Mosaic and Akariwo, Matano ancestry beyond Kaguna, the Muslim episode, Babidi, and the exact location of Makutu.
+
+I can turn the open gaps into a question list for next Saturday, or draft a family tree from the names in the transcript.
+
+---
+
+Please do!
+
+---
+
+
+First, a correction to my earlier summary: I said Malachi was born around 1911, but re-reading the exchange, the 1911 birth (the &quot;telephone&quot; nickname) more likely belongs to Abimerechi. That also fits Daddy being about 87 and baptized in 1948 at roughly age nine. Worth confirming with him.
+
+**Draft family tree** (names and spellings unconfirmed; &quot;?&quot; marks guesses)
+
+```
+PATERNAL (Patano)                        MATERNAL (Matano, Babito)
+
+Nkonte (oldest recalled)                 Kaguna (priestess/diviner)
+  └─ Malachi (gave church land)            └─ Ikesa (Daddy&#x27;s mother)
+       │  wife: Babidi? (see questions)          father: unknown
+       │  daughter: Kawala/Kagala?               (generic Babito names only)
+       └─ Abimerechi (b. 1911?, &quot;Siku&quot;)     relatives named: Igema (first
+            married Ikesa                   educated; posted to Ikesa&#x27;s home),
+            │                               an elder sister (Gweli?) who
+            └─ Patrick Mozale (&quot;Daddy&quot;)     pushed to name him
+                 ├─ George (younger brother)
+                 └─ children: Johnny, Charles, and siblings
+```
+
+**Questions for next Saturday**
+
+*Education thread (the planned focus)*
+1. What do you remember of the day at Makutu on 26 December 1948? Who took you, and what was the church like?
+2. How old were you when Kawala took you into the Muslim household, how long did you stay, and how did Abimerechi bring you back?
+3. Which Catholic primary school did you attend, where was it, and what was your first day like?
+4. Who was Igema to the family, and how did he end up at Ikesa&#x27;s home?
+5. When did Abimerechi first come to value education (the educated princes at Wako&#x27;s court)?
+
+*Gaps in the tree*
+6. Are Babidi and Timurunji (the paternal grandmother) the same person? Whose mother was Kawala/Kagala?
+7. Who were Ikesa&#x27;s father and siblings? Who are Mosaic and Akariwo&#x27;s fathers?
+8. Who was the elder sister who insisted on naming you, and how does she connect to the Bukono homes?
+9. Who was Cairo Safadia, and what did he tell you about the clan&#x27;s history?
+10. How does the Baise Gaga line link to the Nabongo or Abasuizi lines Charles asked about?
+
+*Earliest memories*
+11. Instead of &quot;earliest memory,&quot; try concrete triggers: a smell, a food, the road to Bukono, the first time you saw a car. He recalls stories better than abstractions.
+12. Do you remember George being born, or where you lived when he was small?
+
+*Sensitive story, ask gently*
+13. How did Ikesa come to be married to Abimerechi? He told it partly today, and it deserves its own careful session.
+
+**Practical fixes**
+- Ask Daddy to spell names aloud as he says them, since Lusoga passages garble the transcript.
+- Confirm the Makutu location on Google Maps, and check whether the church keeps a baptism register.
+- Note Johnny&#x27;s suggestion to let stories wander and use Charles&#x27;s checklist only when the flow stops.
+
+I can put this into a one-page document you can print for the session, if that would help.
+
+---
+
+Nah. I&#x27;m going to make an append-only non-lossy verbatim transcript in each session, using transcript (*.txt) from zooms AI. Then you, Claude, will do some contextualizing and planning for the next meeting. We&#x27;ll muddle-through. This is V -&gt; I&#x27; :)
+
+---
+
+Got it. Keeping the raw transcript untouched and putting my work in a separate layer is the right split, because nothing you care about can be lost by a bad summary.
+
+A structure that fits how you described it:
+
+```
+## Session N: YYYY-MM-DD
+### V: verbatim   (Zoom .txt, pasted whole, never edited)
+### I&#x27;: Claude&#x27;s layer   (summary, tree deltas, gaps, questions for session N+1)
+```
+
+Two conventions would keep it clean:
+
+- **Corrections get appended, not edited.** The Malachi/Abimerechi 1911 fix is already sitting in your file as a correction below the original error, which is exactly the right pattern. Each session&#x27;s I&#x27; can start with &quot;Changes since last time.&quot;
+- **Speaker key lives in I&#x27;, not V.** In this transcript &quot;Ukubona LLC&quot; is the account label covering more than one voice, mostly Daddy&#x27;s, and &quot;S&quot; is Charles. I&#x27;d add a short key in I&#x27; so the verbatim stays pristine but stays readable later.
+
+When you have next Saturday&#x27;s transcript, send it along with oral-history.md. I&#x27;ll append Session 2&#x27;s I&#x27; (what&#x27;s new, what got resolved from the 13 questions, what to pursue next) without touching anything above it.
+
+---
+
+Perhaps in each session you can ask us about names. Those will most certainly be mispelled. So lets build a dramatis personnae of family tree. And keep updating the spellings with each session
+
+---
+
+Good call. Names are where the transcript degrades most, and a running dramatis personae also gives you a clean spelling authority to check future transcripts against. Here is v0, built from Session 1, with every variant the transcript produced. Nothing is confirmed yet.
+
+## Dramatis Personae v0 (after Session 1, 2026-09-19)
+
+| Person | Relationship | Variants in transcript | Status |
+|---|---|---|---|
+| Patrick Mozale | &quot;Daddy&quot;, the biography&#x27;s subject | Mouzari, Mozale, Yamazade | Confirm full name and any clan or baptismal names |
+| Abimerechi | Daddy&#x27;s father, b. ~1911 (&quot;Siku&quot;) | Abimelechi, Abimelech, Abhimerechi, Abimeneki | Confirm spelling and his Christian name |
+| Malachi | Abimerechi&#x27;s father | Malachi | Fairly stable |
+| Nkonte | Oldest paternal ancestor recalled | Unkont, Unconto, Ukono | Also possibly a place (Bukonta/Bukonto/Bukono); needs person vs. place |
+| Ikesa | Daddy&#x27;s mother | Akasa, Akersa, Kesa | Confirm; unclear if this is a name or a title |
+| Kaguna | Ikesa&#x27;s mother, priestess and diviner | Kaguna | Stable |
+| Babidi | Malachi&#x27;s wife? Mother of Kawala? | Babidya, Bobbidi, Babali | Role unclear |
+| Kawala | Took Daddy into the Muslim household | Kawara, Kagala, Kerala | Confirm; possibly a step-sister |
+| Igema | First educated relative, posted to Ikesa&#x27;s home | Igema | Confirm |
+| Timurunji | Paternal grandmother | Timurunsh, Timurud | Possibly same as Babidi |
+| William Pimba | Ancient Babito name (&quot;chicks&quot;) | Mulan Pembro, Muliam Pimba, Liang Tingba | Nickname, likely unfixable |
+| Kairo Safadia | Historian of the clan&#x27;s children | Cairo Safadia | Confirm who he is |
+| Gweli | Elder sister who pushed to name Daddy | Gweneve | Confirm |
+| Wako | Ruler at the royal court, connected to the education story | Wako | Confirm; possibly a title |
+| Nachibande | Princess chosen as a bride | Machu Panda, Nachibandezo | Confirm |
+| George | Daddy&#x27;s younger brother | George | Stable |
+| Jeremiah | Related to Abimerechi; married into the story | Jeremiah | Role unclear |
+| Isiko | Named after that woman&#x27;s husband | Isiko | Confirm |
+| Mosaic, Akariwo | Two men whose fathers are unknown | Mosaic, Akariwo | Placeholder |
+
+**Places and clan terms**
+Makutu (baptism site) appeared as Makut and Makoto, in Bugweri County. Others: Bukono/Bukonto, Baise Gaga (clan), Babito, Abasuizi/Abasomi, Nabongo/Nyabongo, Kakunguru.
+
+## Standing ritual for each session
+
+I&#x27;ll open every I&#x27; layer with a &quot;Names to confirm&quot; list of the new and ambiguous names from that transcript. The spelling table then gets appended as dated updates rather than overwritten. For example: &quot;Session 2: Abimerechi, confirmed as Abimelech by Daddy.&quot; That keeps the original variants visible, which matters when you re-read the verbatim.
+
+For this coming Saturday, I&#x27;d have Daddy spell the top five aloud early on: Abimerechi, Ikesa, Kawala, Nkonte, and Makutu.</pre>
+  </details>
+</section>
+</article>
+</main>
+<footer>Append-only. Re-verify any block by hashing its text (UTF-8, line endings as LF) with SHA-256 and comparing it to the value shown.</footer>
+<script>
+(function () {
+  function hex(buf) { return Array.prototype.map.call(new Uint8Array(buf), function (b) { return b.toString(16).padStart(2, "0"); }).join(""); }
+  async function check(el) {
+    var pre = document.getElementById(el.getAttribute("data-target"));
+    var want = el.parentNode.querySelector(".hash").getAttribute("data-expect");
+    try {
+      var buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(pre.textContent));
+      var got = hex(buf);
+      el.textContent = got === want ? "matches" : "differs";
+      el.className = "verify " + (got === want ? "ok" : "bad");
+    } catch (e) {
+      el.textContent = "unavailable in this browser context";
+    }
+  }
+  function all() { document.querySelectorAll(".verify").forEach(check); }
+  document.getElementById("verify-all").addEventListener("click", all);
+  function openHash() {
+    var t = location.hash && document.querySelector(location.hash);
+    var d = t && t.querySelector("details");
+    if (d) d.open = true;
+  }
+  window.addEventListener("hashchange", openHash); openHash();
+})();
+</script>
+</body>
+</html>
