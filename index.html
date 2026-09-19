@@ -102,6 +102,32 @@ footer { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(-
 .txtbtn { font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--rule);
   border-radius: 4px; padding: .25rem .7rem; cursor: pointer; }
 .session, .layer, pre { scroll-margin-top: 4.5rem; }
+
+/* markdown view, version 2026-09-19 */
+.seg { display: inline-flex; margin: 0 1.1rem .8rem; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.seg button { font: inherit; font-size: .88rem; padding: .3rem .85rem; background: transparent; color: var(--ink); border: 0; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--panel); }
+.md { border-top: 1px solid var(--rule); padding: 1.2rem 1.1rem 1.6rem; }
+.md[hidden], pre[hidden] { display: none; }
+.turn { margin: 0 0 1.8rem; max-width: 46rem; padding-left: .95rem; border-left: 3px solid var(--rule); }
+.turn.ai { border-left-color: var(--accent); }
+.turn .who { font-size: .85rem; color: var(--muted); margin: 0 0 .3rem; }
+.md h3 { font-size: 1.12rem; margin: 1.3rem 0 .4rem; line-height: 1.3; }
+.md h4 { font-size: 1rem; margin: 1rem 0 .3rem; }
+.md p { margin: .55rem 0; }
+.md ul, .md ol { margin: .5rem 0; padding-left: 1.4rem; }
+.md li { margin: .22rem 0; }
+.md code { font-family: var(--mono); font-size: .84em; background: var(--bg); border: 1px solid var(--rule);
+  border-radius: 3px; padding: 0 .3em; overflow-wrap: anywhere; }
+.md pre.code { margin: .7rem 0; padding: .8rem 1rem; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg);
+  white-space: pre; overflow: auto; max-height: none; font-family: var(--mono); font-size: .8rem; line-height: 1.45; }
+.md pre.code code { background: none; border: 0; padding: 0; font-size: inherit; }
+.tablewrap { overflow-x: auto; margin: .8rem 0; }
+.md table { border-collapse: collapse; font-size: .88rem; line-height: 1.4; }
+.md th, .md td { border: 1px solid var(--rule); padding: .35rem .6rem; text-align: left; vertical-align: top; }
+.md th { background: var(--bg); }
+.md p, .md h3, .md h4, .md li, .md td, .md th, .md blockquote { scroll-margin-top: 4.5rem; }
+.md blockquote { margin: .6rem 0; padding-left: .9rem; border-left: 3px solid var(--rule); color: var(--muted); }
 </style>
 </head>
 <body>
@@ -4316,7 +4342,7 @@ Yeah.
 <section class="layer" id="s1-i">
   <details open>
     <summary><span class="ttl">I&#8242;: chat log</span><span class="fn">oral-history.md</span></summary>
-    <p class="note">The conversation with Claude, exactly as saved in oral-history.md, including the correction appended after the first summary.</p>
+    <p class="note">The conversation with Claude, as saved in oral-history.md, including the correction appended after the first summary. Shown formatted; choose Source to see the exact characters the checksum covers.</p>
     <dl class="facts">
       <dt>Bytes</dt><dd>10,503</dd>
       <dt>Characters</dt><dd>10,465</dd>
@@ -4559,6 +4585,7 @@ For this coming Saturday, I&#x27;d have Daddy spell the top five aloud early on:
   }
   function jumpText(layer, needle) {
     openLayer(layer);
+    if (window.ukbJumpRendered && window.ukbJumpRendered(layer, needle)) return;
     var pre = document.getElementById(layer + "-text");
     var idx = pre.textContent.indexOf(needle);
     if (idx < 0) return;
@@ -4603,6 +4630,125 @@ For this coming Saturday, I&#x27;d have Daddy spell the top five aloud early on:
   });
   document.addEventListener("click", function (e) { if (!panel.hidden && !panel.contains(e.target)) closeW(); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !panel.hidden) { closeW(); wbtn.focus(); } });
+})();
+</script>
+<script>
+(function () {
+  function esc(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+  function inline(s) {
+    var codes = [];
+    s = s.replace(/`([^`]+)`/g, function (_, c) { codes.push(c); return "\u0000" + (codes.length - 1) + "\u0000"; });
+    s = esc(s);
+    s = s.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    s = s.replace(/(^|[^*\w])\*([^*\s](?:[^*]*[^*\s])?)\*(?![*\w])/g, "$1<em>$2</em>");
+    return s.replace(/\u0000(\d+)\u0000/g, function (_, i) { return "<code>" + esc(codes[+i]) + "</code>"; });
+  }
+  var LI = /^(\s*)([-*]|\d+\.)\s+(.*)$/;
+  function isSep(l) { return l.indexOf("|") >= 0 && /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)*\|?\s*$/.test(l); }
+  function cells(l) { return l.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map(function (c) { return c.trim(); }); }
+  function list(lines, i, base) {
+    var first = lines[i].match(LI), ordered = /\d/.test(first[2]), start = ordered ? parseInt(first[2], 10) : 1, items = [], n = lines.length;
+    while (i < n) {
+      var L = lines[i], m = L.match(LI);
+      if (!m) {
+        if (!/^\s*$/.test(L)) break;
+        var j = i; while (j < n && /^\s*$/.test(lines[j])) j++;
+        var mm = j < n && lines[j].match(LI);
+        if (mm && mm[1].length >= base && (mm[1].length > base || /\d/.test(mm[2]) === ordered)) { i = j; continue; }
+        break;
+      }
+      var ind = m[1].length;
+      if (ind < base) break;
+      if (ind > base) { var r = list(lines, i, ind); if (items.length) items[items.length - 1] += r[0]; else items.push(r[0]); i = r[1]; continue; }
+      if (/\d/.test(m[2]) !== ordered) break;
+      items.push(inline(m[3])); i++;
+    }
+    var tag = ordered ? "ol" : "ul";
+    return ["<" + tag + (ordered && start !== 1 ? ' start="' + start + '"' : "") + ">" +
+      items.map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</" + tag + ">", i];
+  }
+  function blocks(lines) {
+    var out = [], i = 0, n = lines.length;
+    function startsBlock(k) {
+      var l = lines[k];
+      return /^\s*$/.test(l) || /^```/.test(l) || /^#{1,6}\s/.test(l) || LI.test(l) || /^>\s?/.test(l) || (l.indexOf("|") >= 0 && k + 1 < n && isSep(lines[k + 1]));
+    }
+    while (i < n) {
+      var L = lines[i], m;
+      if (/^\s*$/.test(L)) { i++; continue; }
+      if (/^```/.test(L)) {
+        var code = []; i++;
+        while (i < n && !/^```/.test(lines[i])) { code.push(lines[i]); i++; }
+        i++; out.push('<pre class="code"><code>' + esc(code.join("\n")) + "</code></pre>"); continue;
+      }
+      if ((m = L.match(/^(#{1,6})\s+(.*)$/))) { var lv = m[1].length <= 2 ? 3 : 4; out.push("<h" + lv + ">" + inline(m[2]) + "</h" + lv + ">"); i++; continue; }
+      if (L.indexOf("|") >= 0 && i + 1 < n && isSep(lines[i + 1])) {
+        var head = cells(L), rows = []; i += 2;
+        while (i < n && lines[i].trim().charAt(0) === "|") { rows.push(cells(lines[i])); i++; }
+        out.push('<div class="tablewrap"><table><thead><tr>' + head.map(function (c) { return "<th>" + inline(c) + "</th>"; }).join("") +
+          "</tr></thead><tbody>" + rows.map(function (r) { return "<tr>" + r.map(function (c) { return "<td>" + inline(c) + "</td>"; }).join("") + "</tr>"; }).join("") +
+          "</tbody></table></div>");
+        continue;
+      }
+      if (LI.test(L)) { var r = list(lines, i, L.match(LI)[1].length); out.push(r[0]); i = r[1]; continue; }
+      if (/^>\s?/.test(L)) {
+        var q = []; while (i < n && /^>\s?/.test(lines[i])) { q.push(lines[i].replace(/^>\s?/, "")); i++; }
+        out.push("<blockquote>" + q.map(inline).join("<br>") + "</blockquote>"); continue;
+      }
+      var p = [L]; i++;
+      while (i < n && !startsBlock(i)) { p.push(lines[i]); i++; }
+      out.push("<p>" + p.map(inline).join("<br>") + "</p>");
+    }
+    return out.join("\n");
+  }
+  function renderChat(text) {
+    var turns = [[]], fence = false;
+    text.split("\n").forEach(function (L) {
+      if (/^```/.test(L)) fence = !fence;
+      if (!fence && /^---\s*$/.test(L)) turns.push([]); else turns[turns.length - 1].push(L);
+    });
+    turns = turns.filter(function (t) { return t.some(function (l) { return l.trim(); }); });
+    return turns.map(function (t, k) {
+      var ai = k % 2 === 1;
+      return '<section class="turn ' + (ai ? "ai" : "me") + '"><div class="who">' + (ai ? "Claude" : "You") + "</div>" + blocks(t) + "</section>";
+    }).join("\n");
+  }
+
+  function setView(layer, view) {
+    var sec = document.getElementById(layer); if (!sec) return;
+    sec.dataset.view = view;
+    document.getElementById(layer + "-md").hidden = view !== "rendered";
+    document.getElementById(layer + "-text").hidden = view !== "source";
+    sec.querySelectorAll(".seg button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.view === view)); });
+  }
+  document.querySelectorAll(".layer").forEach(function (sec) {
+    var pre = sec.querySelector("pre.i"); if (!pre) return;
+    var layer = sec.id, det = sec.querySelector("details");
+    var box = document.createElement("div"); box.className = "md"; box.id = layer + "-md";
+    box.innerHTML = renderChat(pre.textContent);
+    var seg = document.createElement("div"); seg.className = "seg"; seg.setAttribute("role", "group"); seg.setAttribute("aria-label", "View");
+    [["rendered", "Formatted"], ["source", "Source (verbatim)"]].forEach(function (v) {
+      var b = document.createElement("button"); b.type = "button"; b.dataset.view = v[0]; b.textContent = v[1];
+      b.addEventListener("click", function () { setView(layer, v[0]); }); seg.appendChild(b);
+    });
+    det.insertBefore(seg, pre); det.insertBefore(box, pre);
+    setView(layer, "rendered");
+  });
+
+  window.ukbJumpRendered = function (layer, needle) {
+    var sec = document.getElementById(layer);
+    if (!sec || sec.dataset.view !== "rendered") return false;
+    var box = document.getElementById(layer + "-md");
+    var q = needle.replace(/\*\*|`/g, "").replace(/^#+\s*/, "").trim();
+    var w = document.createTreeWalker(box, NodeFilter.SHOW_TEXT), n, at = -1;
+    while ((n = w.nextNode())) { at = n.nodeValue.indexOf(q); if (at >= 0) break; }
+    if (at < 0 || !n) { setView(layer, "source"); return false; }
+    var el = n.parentElement.closest("p,h3,h4,li,td,th,blockquote") || n.parentElement;
+    el.scrollIntoView({ block: "start" });
+    var r = document.createRange(); r.setStart(n, at); r.setEnd(n, at + q.length);
+    if (window.CSS && CSS.highlights && window.Highlight) CSS.highlights.set("jump", new Highlight(r));
+    return true;
+  };
 })();
 </script>
 </body>
