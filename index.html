@@ -128,6 +128,14 @@ footer { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(-
 .md th { background: var(--bg); }
 .md p, .md h3, .md h4, .md li, .md td, .md th, .md blockquote { scroll-margin-top: 4.5rem; }
 .md blockquote { margin: .6rem 0; padding-left: .9rem; border-left: 3px solid var(--rule); color: var(--muted); }
+.thread { padding: 0 1.1rem 1.2rem; max-width: 46rem; }
+.thread h3 { font-size: 1.1rem; margin: .4rem 0 .4rem; }
+.thread p { margin: .5rem 0; }
+.moments { list-style: none; padding: 0; margin: .5rem 0; }
+.moments li { display: flex; gap: .75rem; align-items: baseline; margin: .5rem 0; }
+.jumpbtn { font-family: var(--mono); font-size: .82rem; background: var(--bg); color: var(--accent); border: 1px solid var(--rule);
+  border-radius: 4px; padding: .1rem .5rem; cursor: pointer; flex: none; }
+.jumpbtn:hover { border-color: var(--accent); }
 </style>
 </head>
 <body>
@@ -167,6 +175,7 @@ footer { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(-
       <ul>
         <li><a href="#s1-v">V: verbatim transcript</a></li>
         <li><a href="#s1-i">I&#8242;: chat log</a></li>
+        <li><a href="#s1-t">Threads: linked notes</a></li>
       </ul>
     </li>
   </ol>
@@ -4508,6 +4517,23 @@ I&#x27;ll open every I&#x27; layer with a &quot;Names to confirm&quot; list of t
 For this coming Saturday, I&#x27;d have Daddy spell the top five aloud early on: Abimerechi, Ikesa, Kawala, Nkonte, and Makutu.</pre>
   </details>
 </section>
+
+<section class="layer" id="s1-t">
+  <details open>
+    <summary><span class="ttl">Threads: linked notes</span><span class="fn">added after the session; not part of V or I&#8242;</span></summary>
+    <div class="thread">
+      <h3>Naming, and the wrong name</h3>
+      <p>Where it comes up in the transcript (each button opens that spot):</p>
+      <ul class="moments">
+        <li><button type="button" class="jumpbtn" data-layer="s1-v" data-find="[Ukubona LLC] 04:53:43">04:53</button><span>He was named the moment he was born by a forceful aunt, and nobody else got a say.</span></li>
+        <li><button type="button" class="jumpbtn" data-layer="s1-v" data-find="[Ukubona LLC] 04:54:26">04:54</button><span>The cockerel test: name two cockerels, put them on the roof, and see which comes down first. If neither does, both names are wrong.</span></li>
+        <li><button type="button" class="jumpbtn" data-layer="s1-v" data-find="[Ukubona LLC] 04:55:29">04:55</button><span>He cried all the time, which the elders read as both names being rejected. They consulted again and threw the chickens back.</span></li>
+      </ul>
+      <p>Linked: <a href="https://ukb-dt.github.io/soga/">soga: Preface</a>, the archive&#8217;s opening scene. A newborn with a fever and a name that doesn&#8217;t fit is settled by two cockerels named Isiko and Kairu.</p>
+      <p>Two things to check, not findings. The soga page frames a name as summoning a particular spirit, and one version names the child after his grandfather; nobody said that on the call, so it is a question for Daddy. And Isiko (05:35) and Kairo Safadia (04:56) sound close to the page&#8217;s Isiko and Kairu, but nothing in the session says they are connected.</p>
+    </div>
+  </details>
+</section>
 </article>
 </main>
 <footer>Append-only. Re-verify any block by hashing its text (UTF-8, line endings as LF) with SHA-256 and comparing it to the value shown.</footer>
@@ -4575,7 +4601,12 @@ For this coming Saturday, I&#x27;d have Daddy spell the top five aloud early on:
       { l: "Family tree", s: "draft", f: "**Draft family tree**" },
       { l: "Questions", s: "next Saturday", f: "**Questions for next Saturday**" },
       { l: "Dramatis personae", s: "v0", f: "## Dramatis Personae v0" },
-      { l: "Standing ritual", s: "each session", f: "## Standing ritual for each session" } ] }
+      { l: "Standing ritual", s: "each session", f: "## Standing ritual for each session" } ] },
+    { name: "Session 1: threads", layer: "s1-v", items: [
+      { l: "Naming thread", s: "linked notes", hash: "s1-t" },
+      { l: "Named at birth", s: "04:53", f: "[Ukubona LLC] 04:53:43" },
+      { l: "Cockerel test", s: "04:54", f: "[Ukubona LLC] 04:54:26" },
+      { l: "Crying child", s: "04:55", f: "[Ukubona LLC] 04:55:29" } ] }
   ];
 
   function openLayer(id) {
@@ -4602,6 +4633,7 @@ For this coming Saturday, I&#x27;d have Daddy spell the top five aloud early on:
     if (window.CSS && CSS.highlights && window.Highlight) CSS.highlights.set("jump", new Highlight(r));
   }
 
+  window.ukbJumpText = jumpText;
   var wbtn = document.getElementById("waffle-btn"), panel = document.getElementById("waffle-panel");
   function closeW() { panel.hidden = true; wbtn.setAttribute("aria-expanded", "false"); }
   GROUPS.forEach(function (g) {
@@ -4750,6 +4782,12 @@ For this coming Saturday, I&#x27;d have Daddy spell the top five aloud early on:
     return true;
   };
 })();
+</script>
+<script>
+document.addEventListener("click", function (e) {
+  var b = e.target.closest && e.target.closest(".jumpbtn");
+  if (b && window.ukbJumpText) window.ukbJumpText(b.dataset.layer, b.dataset.find);
+});
 </script>
 </body>
 </html>
