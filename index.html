@@ -189,7 +189,7 @@ footer { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(-
       <tr><td>2026-09-26</td><td><a href="#s2">Session 2</a></td><td class="ok">Recorded</td><td>V, I&#8242;, Threads</td><td>Opens with a name-spelling pass.</td></tr>
       <tr><td>2026-10-03</td><td><a href="#g1">None</a></td><td class="gap">Not held</td><td>Notice only</td><td>Daddy had another engagement. No recording exists; nothing is missing.</td></tr>
       <tr><td>2026-10-10</td><td><a href="#s3">Session 3</a></td><td class="ok">Recorded</td><td>V, I&#8242;, Threads</td><td>Follows the gap; opens by reviewing where Session 2 ended.</td></tr>
-      <tr><td>2026-10-17</td><td><a href="#s4">Session 4</a></td><td class="ok">Recorded</td><td>V, I&#8242;, Threads</td><td>Third export format (WebVTT). Opens by looking for where Session 3 ended; covers the Kikuyu year and the road to Makerere.</td></tr>
+      <tr><td>2026-10-17</td><td><a href="#s4">Session 4</a></td><td class="ok">Recorded</td><td>V, S, I&#8242;, Threads</td><td>Third export format (WebVTT). Opens by looking for where Session 3 ended; covers the Kikuyu year and the road to Makerere.</td></tr>
     </tbody>
   </table></div>
   <p>Next Saturday is 2026-10-24. It gets a row whether or not a session is held.</p>
@@ -226,6 +226,7 @@ footer { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(-
     <li><a href="#s4">Session 4, 2026-10-17</a>
       <ul>
         <li><a href="#s4-v">V: verbatim transcript</a></li>
+        <li><a href="#s4-s">S: the tool&#8217;s AI summary</a></li>
         <li><a href="#s4-i">I&#8242;: chat log</a></li>
         <li><a href="#s4-t">Threads: linked notes</a></li>
       </ul>
@@ -12145,7 +12146,7 @@ Martin went in expecting one traumatic day: the bursar (the tool writes &quot;Ba
 <section class="layer" id="s4-v">
   <details>
     <summary><span class="ttl">V: verbatim transcript</span><span class="fn">session-4.txt</span></summary>
-    <p class="note">Pasted whole, exactly as exported: a WebVTT file (header WEBVTT, millisecond cue times, speaker label then text), a third export format after Session 1&#8217;s Zoom AI transcript and Sessions 2 and 3&#8217;s &#8220;My Notes&#8221; export. It has no AI summary block. Cues overlap in time, so speakers interleave. The file starts at 00:34:12 on the tool&#8217;s clock, mid-sentence. The original used CRLF line endings (124,716 bytes); the checksum covers the text with LF endings, as the footer says. Speaker labels are the tool&#8217;s: &#8220;Ukubona LLC&#8221; is the shared account and covers more than one voice, mostly Daddy&#8217;s and the host&#8217;s; &#8220;S&#8221; is Charles.</p>
+    <p class="note">Pasted whole, exactly as exported: a WebVTT file (header WEBVTT, millisecond cue times, speaker label then text), a third export format after Session 1&#8217;s Zoom AI transcript and Sessions 2 and 3&#8217;s &#8220;My Notes&#8221; export. The tool&#8217;s AI summary is kept separately, in the S layer. Cues overlap in time, so speakers interleave. The file starts at 00:34:12 on the tool&#8217;s clock, mid-sentence. The original used CRLF line endings (124,716 bytes); the checksum covers the text with LF endings, as the footer says. Speaker labels are the tool&#8217;s: &#8220;Ukubona LLC&#8221; is the shared account and covers more than one voice, mostly Daddy&#8217;s and the host&#8217;s; &#8220;S&#8221; is Charles.</p>
     <dl class="facts">
       <dt>Bytes</dt><dd>120,631</dd>
       <dt>Characters</dt><dd>120,137</dd>
@@ -16242,22 +16243,60 @@ Ukubona LLC: Your place. It&#x27;s gone.
   </details>
 </section>
 
+<section class="layer" id="s4-s">
+  <details>
+    <summary><span class="ttl">S: the tool&#8217;s AI summary</span><span class="fn">pasted separately; not in session-4.txt</span></summary>
+    <p class="note">The AI Quick recap, Next steps and Summary that the transcription tool produced for this session, pasted unchanged. It is not part of the WebVTT export, so it has its own layer and checksum rather than sitting inside V. Several errors in it are listed in I&#8242;.</p>
+    <dl class="facts">
+      <dt>Bytes</dt><dd>6,194</dd>
+      <dt>Characters</dt><dd>6,194</dd>
+      <dt>Lines</dt><dd>23</dd>
+      <dt>SHA-256</dt><dd class="hash" data-expect="496d6b574d16419321566fd753a951e5e7b667db69d2d11b350f09a23dc852ca">496d6b574d16419321566fd753a951e5e7b667db69d2d11b350f09a23dc852ca</dd>
+      <dt>Check</dt><dd class="verify" data-target="s4-s-text">not run</dd>
+    </dl>
+    <pre id="s4-s-text" class="v">Quick recap
+This was the fourth session of a research interview focused on tracing the educational trajectory of the participant from Kikuyu College of Social Studies to Makerere University. The discussion centered on the participant&#x27;s one-year preparatory course at Kikuyu (1965-1966) which prepared students for the mature age entrance examination equivalent to university level admission. Key figures discussed included Paul Fordham, the principal, and Picton Mbatha, a deputy principal who was also an ANC activist in exile, though the participant reported no political influence from this connection. The conversation explored how the participant&#x27;s strong English skills, developed under Mbatha&#x27;s tutelage, enabled him to transition directly to university while others had to start with diploma programs. The discussion also covered the participant&#x27;s academic progression from social work diploma to economics degree, his employment at Uganda Commercial Bank, and his eventual return to Makerere as an assistant lecturer before pursuing further studies at Berkeley. The session concluded with plans to continue exploring the timeline between 1970-1975 when the participant completed his degree and began doctoral studies.
+Next steps
+S
+- Research Paul Fordham, the principal of Kikuyu College of Social Studies, to find more information about him and the organization that funded the scholarship.
+- Look for the book &quot;The Political Geography of Africa&quot; written by Paul Fordham.
+- Use the editorial work from session 4 and add the family tree screenshot shared by Jim Perez for Daddy&#x27;s information.
+- Prepare specific questions for the next session to fill in the timeline gaps between 1970 (graduation) and 1975 (arrival at UC Berkeley), including the transition from Uganda Commercial Bank (UCB) to the Department of Social Work as an assistant lecturer and the subsequent sponsorship to Manchester University.
+Summary
+Kikuyu to University Education Transition
+The meeting focused on reviewing previous session content and discussing the transition from Kikuyu to university education. The participants worked to establish timeline details, with estimates suggesting the transition occurred around 1963-1964, though the exact year needed verification. They discussed the one-year course at Kikuyu and planned to build a more detailed timeline with specific timestamps before filling in additional details about family involvement during this period.
+Kikuyu College Scholarship Experience
+Ukubona discussed his experience at Kikuyu College of Social Studies, where he received a scholarship to prepare for the mature age entrance examination in 1966. He had to resign from his railway job to pursue the scholarship full-time, which involved a significant financial and personal transition for his family. The college, which was a department of the University of East Africa, helped him obtain a certificate equivalent to a university level qualification, which prepared him for further studies at Makerere.
+Educational Experience at Social Studies College
+Ukubona discussed his educational experience at Chikuyu&#x27;s College of Social Studies, where he learned English and writing skills from several lecturers including Picton Mbatha, who was later identified as a prominent ANC activist and educator. Ukubona clarified that despite Mbatha&#x27;s political background, there was no evidence of revolutionary influence on his education, as he did not adopt any political ideas from his teachers. The conversation revealed that Mbatha was connected to political figures including Museveni, though this had no impact on Ukubona&#x27;s own political development.
+Ruakana Rugunda&#x27;s Political and Educational Path
+The discussion focused on Ruakana Rugunda&#x27;s political connections and educational background, particularly his time at UC Berkeley and his association with Revolutionary Yosemite. The participants explored how Rugunda&#x27;s early political affiliations affected his career path, including his connection to Museveni in East Africa. The conversation also touched on colonial educational influences, specifically the emphasis on English language education at Tikuyu College of Social Studies, which was part of the University of Nairobi, and how this shaped students&#x27; aspirations to become English scholars.
+College of Social Studies Discussion
+Ukubona discussed the College of Social Studies, highlighting key figures including Paul Fordham, Mbata, Peter Tim, and Mukacha. He mentioned that having an article published in a prestigious journal was considered a major accomplishment for the college. Ukubona also talked about student trends during this time, including being called &quot;trendsetters&quot; by their peers, and shared humorous memories from their time at the college.
+Podcasts vs Mainstream Media Discussion
+Ukubona discussed the differences between mainstream media and podcasts, noting that podcasts offer more flexibility in content and duration compared to traditional media. He shared details about his educational background, including his interactions with Uncle Chige at Atikuyu College of Social Studies and how he received English course materials from a colleague named Charles. The conversation also touched on Ukubona&#x27;s early interest in reading, particularly the Bible, and how his father encouraged his literacy and academic pursuits.
+Educational Trajectories and Career Progress
+Ukubona and S discussed the educational trajectories of two individuals, focusing on how their different academic paths affected their career progress. They examined how one person&#x27;s strong English skills enabled him to enter the civil service at a higher level than Ukubona, who had to start with a diploma in social work before transitioning to economics. The conversation revealed details about their educational backgrounds, with Ukubona pursuing economics at the University of Makerere and later working at Uganda Commercial Bank, while the other person studied English and eventually became a cabinet secretary. They established key timeline markers including Ukubona&#x27;s graduation in 1970 and his arrival at UC Berkeley in 1975, which will help fill in gaps in their historical documentation.
+</pre>
+  </details>
+</section>
+
 <section class="layer" id="s4-i">
   <details open>
     <summary><span class="ttl">I&#8242;: chat log</span><span class="fn">this conversation</span></summary>
     <p class="note">The conversation with Claude about Session 4, frozen at the first update. The Claude turn is the set of notes written into this page, not the chat&#8217;s closing summary. Shown formatted; choose Source to see the exact characters the checksum covers.</p>
     <dl class="facts">
-      <dt>Bytes</dt><dd>9,704</dd>
-      <dt>Characters</dt><dd>9,520</dd>
-      <dt>Lines</dt><dd>73</dd>
-      <dt>SHA-256</dt><dd class="hash" data-expect="51d66f499e6a949a4dfabde17c8c57625c8c6b0206248c35ee1b687f4e8863c9">51d66f499e6a949a4dfabde17c8c57625c8c6b0206248c35ee1b687f4e8863c9</dd>
+      <dt>Bytes</dt><dd>11,704</dd>
+      <dt>Characters</dt><dd>11,428</dd>
+      <dt>Lines</dt><dd>86</dd>
+      <dt>SHA-256</dt><dd class="hash" data-expect="ab2906b2534c770c08cb2e2450513ac9eb5397b32b03505d5e2e82d21e1b85a0">ab2906b2534c770c08cb2e2450513ac9eb5397b32b03505d5e2e82d21e1b85a0</dd>
       <dt>Check</dt><dd class="verify" data-target="s4-i-text">not run</dd>
     </dl>
     <pre id="s4-i-text" class="i">This is todays session. Lets add it to index.html
 
 ---
 
-Session 4 (2026-10-17, about 1h39m on the tool’s clock, 00:34 to 02:13) is a third export format: a WebVTT file (header `WEBVTT`, millisecond cue times, speaker label then text, CRLF line endings), after Session 1’s Zoom AI transcript and Sessions 2 and 3’s “My Notes” export. It has no AI summary block, so there is no tool summary to correct this time. The file starts at 00:34:12, mid-call, and ends at 02:13:37 mid-conversation. Only two speaker labels appear: “Ukubona LLC” (the shared account, several voices, mostly Daddy’s and the host’s) and “S” (Charles). Johnny and Martin Muwaga do not appear as labels today.
+Session 4 (2026-10-17, about 1h39m on the tool’s clock, 00:34 to 02:13) is a third export format: a WebVTT file (header `WEBVTT`, millisecond cue times, speaker label then text, CRLF line endings), after Session 1’s Zoom AI transcript and Sessions 2 and 3’s “My Notes” export. The tool’s AI summary was not in the export; it arrived separately and is kept unchanged as its own layer, S, after V, with corrections below. The file starts at 00:34:12, mid-call, and ends at 02:13:37 mid-conversation. Only two speaker labels appear: “Ukubona LLC” (the shared account, several voices, mostly Daddy’s and the host’s) and “S” (Charles). Johnny and Martin Muwaga do not appear as labels today.
 
 The story: the call spends its first four minutes finding where Session 3 ended, then takes the year at the Kikuyu College of Social Studies (admission, the railway refusing leave, the scholarship, the mature-age examination), its teachers (Fordham, Mbatha, Moriyuki, Peter Tim), the English training, friends, and Uncle Chige. A long middle section is Charles and the host reflecting on colonial schooling and civil-service careers. The call then reaches the question Charles keeps asking, why social work, and moves through Makerere, the economics degree, the first jobs and the five-year window before Berkeley. It ends with a late digression about a community group and a plan for Session 5.
 
@@ -16279,6 +16318,19 @@ The story: the call spends its first four minutes finding where Session 3 ended,
 | Rugunda, Ruguinda, Rahakana, Ruakana | Ruhakana Rugunda, a former Prime Minister, per the host (00:59:33) | “Ndugu” at 00:59:17 may be the Swahili word, not a name |
 | Isa Gaga, “basic Gaga group”; Kisiki; Muinda, Minda; GCC | A community group and its leadership, unclear (02:05:44 to 02:11:14) | Unreadable as rendered; ask what the group is |
 | Naita, Rita | Someone “in the picture” by the mid-1960s (00:39:06, 00:39:22) | Unclear who; the host moved on |
+
+**Corrections to the tool’s own summary** (kept unchanged in S)
+
+- It calls Daddy “the participant” and “Ukubona”. “Ukubona LLC” is the shared Zoom account, not his name.
+- “Kikuyu (1965-1966)” in the recap is stated as fact. The call did not settle it: Daddy says March 1963 or 1964, the group fits 1965 or 1966. The Summary’s own “1963-1964” and “mature age examination in 1966” disagree with the recap.
+- “English skills enabled him to transition directly to university while others had to start with diploma programs” is reversed. Uncle Chige went straight to a degree because of his English; Daddy entered at diploma level and caught up after a year (01:31:20 to 01:32:25, 01:47:46).
+- “Mbatha was connected to … Museveni”: the Museveni link (01:00:02) is Rugunda’s, met at Berkeley, not Mbatha’s. “Revolutionary Yosemite” is Museveni.
+- “Received English course materials from a colleague named Charles”: the books came from Uncle Chige (01:23:35). Charles is the interviewer. Chige was met on the railway, not at Kikuyu (01:20:04).
+- “Podcasts vs Mainstream Media” is the host’s aside about trendsetters (01:18:01), not Daddy’s view.
+- “Return to Makerere as an assistant lecturer” before Berkeley, and “sponsorship to Manchester University”: the order is unsettled, and Daddy corrected Charles’s “master’s” to a postgraduate diploma (02:03:07 to 02:03:21).
+- “The book ‘The Political Geography of Africa’ by Paul Fordham” is the title as Daddy spoke it. A Paul Fordham wrote *The Geography of African Affairs*; unconfirmed as the same man.
+- “Family tree screenshot shared by Jim Perez”: the call (02:04:42 to 02:05:06) has the host saying he will add a family tree and a screenshot being mentioned; who shared it is garbled.
+- “Research Paul Fordham” is assigned to S in the summary; the host said it at 00:49:57 and Charles agreed.
 
 **What the call showed about why social work**
 
@@ -16625,8 +16677,13 @@ Charles has asked this three times (00:46:53, 01:13:03, 01:43:12) and expected a
       { l: "Jobs, 1970-75", s: "01:57", f: "01:57:09.000 -->" },
       { l: "Late digression", s: "02:05", f: "02:05:39.000 -->" },
       { l: "Close", s: "02:11", f: "02:11:24.000 -->" } ] },
+    { name: "Session 4: AI summary (S)", layer: "s4-s", items: [
+      { l: "Quick recap", s: "start", f: "Quick recap" },
+      { l: "Next steps", s: "list", f: "Next steps" },
+      { l: "Summary", s: "sections", f: "Summary\nKikuyu to University" } ] },
     { name: "Session 4: chat log (I\u2032)", layer: "s4-i", items: [
       { l: "Names to confirm", s: "table", f: "**Names to confirm**" },
+      { l: "Summary errors", s: "corrections", f: "**Corrections to the tool’s own summary**" },
       { l: "Why social work", s: "reading", f: "**What the call showed about why social work**" },
       { l: "Timeline anchors", s: "list", f: "**Timeline anchors, Session 4**" },
       { l: "Carried forward", s: "table", f: "**Carried forward from Sessions 2 and 3**" },
